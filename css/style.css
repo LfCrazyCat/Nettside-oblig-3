@@ -1,0 +1,390 @@
+/* style for body, med tekst */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* lager grid container som deles opp i header, aside, main og footer*/
+#grid-container {
+  display: grid;
+  grid-template-areas: "header" "aside" "main" "footer";
+}
+
+/* Padding i grid */
+header, aside, main, footer {
+  padding: 1rem;
+}
+
+/*Style for header */
+header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  grid-area: header;
+  background-color: navajowhite;
+  padding: 1%;
+  height: 70px;
+
+}
+/* style for nav header */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1900px;
+}
+
+/* style for nav */
+nav {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Style for nav, gjemmer navigasjons i mindre skjermer */
+nav ul {
+  display: block;
+}
+
+nav ul:last-child {
+  width: 100%;
+  flex-basis: 100%;
+}
+
+nav ul li {
+  margin-bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding: 0.5em;
+}
+
+/* Style for navigasjons linker- i desktop */ 
+.navbar a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 25px;
+  transition: .4s ease-in-out;
+}
+
+/* style for logo */
+#logo {
+  text-decoration: none;
+}
+
+
+/* Gjemmer bort navigasjonslinker på smalere skjermer */
+.navbar {
+  display: none;
+  justify-content: space-around;
+}
+
+/* r e s p o n s i v e */ 
+.responsive {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: black; 
+  margin: 0;
+  padding: 0;
+  top: 40px;
+  width: 100%;
+  list-style: none;
+}
+/* r e s p o n s i v e */ 
+.responsive a {
+  color: pink;
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+/* Style for aside/sidebar */
+aside {
+  display: grid;
+  grid-area: aside;
+  font-size: 20px;
+  font-weight: 500;
+  
+}
+
+/* Style for sidebar tekst */
+aside a {
+  display: block;
+  padding: 5px 5px 5px 5px;
+  width: 100%;
+  justify-content: center; 
+  font-size: 20px;
+  color: black;
+  text-decoration: underline; 
+  transition: 0.3s;
+}
+/* Style for liste i sidebar */ 
+aside li {
+  text-decoration: none;
+}
+
+/* Style for aside seksjonen */
+aside section {
+  padding: 25%;
+  font-size: 0px;
+  text-decoration: none;
+  color: rgb(4, 4, 4);
+  background-color: navajowhite;
+}
+
+/* Style for headline i størrelse 4 og skjuler*/ 
+aside h4 {
+  display: none;
+
+}
+
+aside ul {
+  display: block;
+  padding-top: 2px;
+  padding-bottom: 1px;
+  font-size: 0;
+}
+
+/* Style for hovedinnhold og legger i grid-area main */
+main {
+  grid-area: main;
+}
+
+/* Style for bilder hoved seksjon */
+main section img {
+  width: 100%; 
+}
+
+/* Style for flex seksjonen */
+/* disse vil gå på alle side seksjoner */
+.flex-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  text-align: center;
+  place-content: center;
+}
+
+/* Style for seksjon sec-0 */
+#sec-0 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color:navajowhite;
+  padding: 0rem; 
+  justify-content: space-evenly;
+}
+
+/* Style for tekst i seksjonen sec-0 */ 
+#sec-0 a {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Style for image i seksjonen sec-0 */
+#sec-0 img {
+  place-content: center;
+}
+
+/* Style for seksjon sec-1 */
+#sec-1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color:navajowhite;
+  padding: 0rem; 
+  justify-content: space-evenly;
+}
+
+/* Style for tekst i seksjonen sec-1 */ 
+#sec-1 a  {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Style for image i seksjonen sec-1 */
+#sec-1 img {
+  place-content: center;
+}
+
+/* Style for seksjon sec-2 */
+#sec-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color:navajowhite;
+  padding: 0rem; 
+  justify-content: space-evenly;
+}
+
+/* Style for tekst i seksjonen sec-2 */ 
+#sec-2 a {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Style for image i seksjonen sec-2 */
+#sec-2 img {
+  place-content: center;
+}
+
+/* Style for seksjon sec-3 */
+#sec-3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color:navajowhite;
+  padding: 0rem; 
+  justify-content: space-evenly;
+}
+
+/* Style for tekst i seksjonen sec-3 */ 
+#sec-3 a {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Style for image i seksjonen sec-3 */
+#sec-3 img {
+  place-content: center;
+}
+
+/* Style for seksjon sec-4 */
+#sec-4 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color:navajowhite;
+  padding: 0rem; 
+  justify-content: space-evenly;
+}
+
+/* Style for tekst i seksjonen sec-4 */ 
+#sec-4 a {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Style for image i seksjonen sec-4 */
+#sec-4 img {
+  place-content: center;
+}
+
+/* Style for footer */ 
+footer {
+  grid-area: footer;
+}
+
+/* Style for footer navigasjons linker */
+footer ul {
+  padding: 5px;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+
+/* Style på linker som farge, understrek i footer linker */
+footer ul a {
+  color: green; 
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* Style for sosiale medier ikoner, plassering */
+footer .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+/* Style for sosiale medier ikoner, som størrelse */
+footer .social > a {
+   font-size: 40px;
+  width: 40px;
+  height:40px;
+  line-height: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid #ccc; 
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+/* style for sosiale medier, justering */
+footer img {
+  height: 100%;
+}
+
+footer .social > a:hover {
+  opacity: 2;
+  color: brown;
+}
+
+/* Style for copyright tekst */ 
+footer .copyright {
+  margin-top:15px;
+  text-align: center;
+  font-size:13px;
+  color:#656565;
+  margin-bottom: 0;
+ }
+
+ @media only screen and (min-width: 600px) { 
+  #grid-container {
+    grid-template-areas: "header header header" "aside main main" "footer footer footer";
+  
+}
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+  }
+  
+  #ham, .fa-magnifying-glass {
+    display: none;
+  }
+  
+  .flex-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .flex-section img {
+    width: 100%;
+  }
+  
+  .flex-section section {
+    padding: 1rem;
+    width: 60%;
+   /* align-self: center; /* Cut */ 
+  }
+  
+  
+
+}
+
+
+
+
+
