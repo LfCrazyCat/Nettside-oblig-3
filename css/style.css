@@ -318,9 +318,10 @@ footer ul {
 
 /* Style på linker som farge, understrek i footer linker */
 footer ul a {
-  color: rgb(11, 0, 0); 
-  text-decoration: underline;
+  color: black; 
+  text-decoration: black;
   opacity: 0.8;
+  
 }
 
 /* Style for sosiale medier ikoner, plassering */
@@ -349,7 +350,7 @@ footer img {
 }
 
 footer .social > a:hover {
-  opacity: 2;
+  opacity: 0.9;
   color: brown;
 }
 
