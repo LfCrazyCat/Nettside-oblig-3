@@ -174,8 +174,8 @@ main section img {
   padding: 0rem; 
   justify-content: space-evenly;
   /* Legger til width og height for oblig 4 */
-  width: 100%
   height: 100%;
+  width: 100%
 }
 
 /* Style for tekst i seksjonen sec-0 */ 
@@ -318,10 +318,10 @@ footer ul {
 
 
 /* Style på linker som farge, understrek i footer linker */
+/* OBLIG 4: Fjerner underline og bruker solid istedenfor, fjerner Opacity som var på 0.8 før for mer tydelighet */
 footer ul a {
-  color: green; 
+  color: rgb(0, 0, 0); 
   text-decoration: underline;
-  opacity: 0.8;
   
 }
 
