@@ -27,7 +27,7 @@ header {
 /* style for nav header */
 header nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   position: relative;
   max-width: 1900px;
 }
@@ -173,6 +173,9 @@ main section img {
   background-color:navajowhite;
   padding: 0rem; 
   justify-content: space-evenly;
+  /* OBLIG4: LEGGER TIL HEIGHT OG WIDTH */
+  height: 100%;
+  width: 100%;
 }
 
 /* Style for tekst i seksjonen sec-0 */ 
@@ -197,6 +200,9 @@ main section img {
   background-color:navajowhite;
   padding: 0rem; 
   justify-content: space-evenly;
+    /* OBLIG4: LEGGER TIL HEIGHT OG WIDTH */
+  height: 100%;
+  width: 100%;
 }
 
 /* Style for tekst i seksjonen sec-1 */ 
@@ -221,6 +227,9 @@ main section img {
   background-color:navajowhite;
   padding: 0rem; 
   justify-content: space-evenly;
+    /* OBLIG4: LEGGER TIL HEIGHT OG WIDTH */
+  height: 100%;
+  width: 100%;
 }
 
 /* Style for tekst i seksjonen sec-2 */ 
@@ -245,6 +254,9 @@ main section img {
   background-color:navajowhite;
   padding: 0rem; 
   justify-content: space-evenly;
+    /* OBLIG4: LEGGER TIL HEIGHT OG WIDTH */
+  height: 100%;
+  width: 100%;
 }
 
 /* Style for tekst i seksjonen sec-3 */ 
@@ -269,6 +281,9 @@ main section img {
   background-color:navajowhite;
   padding: 0rem; 
   justify-content: space-evenly;
+    /* OBLIG4: LEGGER TIL HEIGHT OG WIDTH */
+  height: 100%;
+  width: 100%;
 }
 
 /* Style for tekst i seksjonen sec-4 */ 
@@ -295,7 +310,7 @@ footer ul {
   padding: 5px;
   list-style: none;
   text-align: center;
-  font-size: 18px;
+  font-size: 48px;
   line-height: 1.6;
   margin-bottom: 0;
 }
@@ -303,7 +318,7 @@ footer ul {
 
 /* Style på linker som farge, understrek i footer linker */
 footer ul a {
-  color: green; 
+  color: rgb(11, 0, 0); 
   text-decoration: underline;
   opacity: 0.8;
 }
