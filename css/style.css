@@ -173,9 +173,6 @@ main section img {
   background-color:navajowhite;
   padding: 0rem; 
   justify-content: space-evenly;
-  /* OBLIG4: LEGGER TIL HEIGHT OG WIDTH */
-  height: 100%;
-  width: 100%;
 }
 
 /* Style for tekst i seksjonen sec-0 */ 
@@ -318,9 +315,10 @@ footer ul {
 
 /* Style på linker som farge, understrek i footer linker */
 footer ul a {
-  color: rgb(11, 0, 0); 
+  color: green; 
   text-decoration: underline;
   opacity: 0.8;
+  
 }
 
 /* Style for sosiale medier ikoner, plassering */
@@ -349,7 +347,7 @@ footer img {
 }
 
 footer .social > a:hover {
-  opacity: 2;
+  opacity: 0.9;
   color: brown;
 }
 
