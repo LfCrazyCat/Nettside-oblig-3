@@ -17,7 +17,6 @@
    <!-- Linker til css stilark -->
    <link rel="stylesheet" href="css/style.css" type="text/css">
 
- 
   <!-- Tittel på siden-->
   <title>Hjem</title>
 
@@ -40,76 +39,40 @@
 
  <!-- meta tagger -->
   <meta name="keywords" content="Sko, Shoes, Converse, color shoes, shoe size, converse offer, shoe offer, great shoe offer">
-  
-
 </head>
 <body>
        <!-- Skip til hovedmeny som dukker opp ved trykk på TAB-knapp-->
        <a href="index.html" class="skip-to-main-content-link">Snarvei til hovedinnholdet</a>
+       <section id="hovedinnhold" tabindex="-1">  </section>
   <!-- Grid container -->
   <div id="grid-container">
     <header>
-      <!-- Skip til hovedmeyen, vet ikke om det vil at denne skal være synlig eller ikke?-->
-         
-          <section id="hovedinnhold" tabindex="-1">  </section>
-
-      <form> <!-- Søkebar-->
+    <!-- Søkefelt hvis ønskeskelig-->
+   <!-- <form> 
         <input type="search" placeholder="Søk her..." title="Search">
         <button type="submit" title="Search..">Søk..<i class="fa-solid fa-magnifying-glass"></i> </button>
-      </form>
-   
-
+      </form>-->
       <nav>
-        
-        <ul class="navbar">
-          <!--   <a href="index.html" class="snarvei">Skip til hovedinnholdet</a>
-          <section id="hovedinnhold" tabindex="-1">  </section>-->
-         
+         <ul class="navbar">
             <li><a href="index.html">HJEM</a></li>
-            <!-- <a href="index.html" class="skip">Skip to content</a> -->
-            
-            <li><a href="converse-produkt.html">PRODUKT</a> </li>
-            <li><a href="om-oss.html">OM OSS</a> </li>
-            <li><a href="#">CONVERSE</a> </li>
-            <li><a href="#">NYHETER</a> </li>
-            <!-- Valgt å ikke fjerne selv om den er utgått siden SEO og UU analyser er tatt -->
-            <li><a href="produkt.html">UTGÅTT</a> </li>
-        </ul>
-  <!-- Denne vil gjøre at de som kun bruker tastatur kan komme til hovedsiden -->
-        <p id="main" tabindex="-1"></p>
-      <!-- Kan brukes for skip flere linker-->
-        <!-- 
-        <ol>
-          <li><a href="index.html">HOVEDSIDEN</a> </li>
-        
-        </ol>
-        -->
-       
-
-
-
-      </nav>
-
-        
-     
-    </header>
-    <!-- Sideseksjon, aside-->
-    <aside>
-      <section>
-            
-            <ul>
-
-            
             <li><a href="converse-produkt.html">PRODUKT</a> </li>
             <li><a href="om-oss.html">OM OSS</a> </li>
             <li><a href="produkt.html">CONVERSE</a> </li>
             <li><a href="#">NYHETER</a> </li>
+            <li><a href="analyse.html">ANALYSE</a> </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Sideseksjon, aside-->
+    <aside role="complementary">
+      <section> 
+          <ul>
+            <li><a href="converse-produkt.html">PRODUKT</a> </li>
+            <li><a href="om-oss.html">OM OSS</a> </li>
+            <li><a href="produkt.html">CONVERSE</a> </li>
             <li><a href="#">TILBUD</a></li>
             <li><a href="analyse.html">ANALYSE</a> </li>
-            
-         
-
-            </ul>
+           </ul>
       </section>
 
     </aside>
@@ -122,55 +85,46 @@
       
  <!-- Kaller disse for sec-0, som gjør at de ulike kateogoriene vil kunne brukes på samme måte i css -->
         <section id="sec-0">
-          <img src="img/Host/lave_host_modell_fra_6318832.webp" alt="Bilde av svarte lave sko, bilde av 6318832"> <!-- width="auto" height="auto"> -->
+          <div role="img" aria-label="Bilde av svarte lave sko fra 6318832">
+            <img src="img/Host/lave_host_modell_fra_6318832.webp" alt="">
+          </div>
           <a href="#">TILBUD</a>
           <!-- Mangler H-tag, vurderte å bruke figcaption istedenfor men siden det ikke er noe krav på at overskrift må være med brukes heller a tagg -->
-        
         </section> 
         
-        
-      
-
-      
-
+    
       <section id="sec-1">
-      
-          <img src="img/Host/host_model_from_Alicija.webp" alt="Bilde av brune cowboy-skoletter, bilde fra Alicija"> <!-- width="auto" height="auto"> --> 
+        <div role="img" aria-label="Bilde av brune cowoby støvletter fra Alicija">
+          <img src="img/Host/host_model_from_Alicija.webp" alt="">
+        </div> 
           <a href="#">NYHETER</a>
           <!-- Mangler H-tag, vurderte å bruke figcaption istedenfor men siden det ikke er noe krav på at overskrift må være med brukes heller a tagg -->
-         
-
       </section>
       
 
-   
-
       <section id="sec-2">
-       
-          <img src="img/Mujeres/mujeres_multi_from_StockSnap.webp" alt="Bilde av fem damer med fargerike kjoler og skjørt, bilde fra StockSnap"> <!-- width="auto" height="auto"> -->
+        <div role="img" aria-label="Bilde av fem damer med fargerike klær, fra StockSnap">
+          <img src="img/Mujeres/mujeres_multi_from_StockSnap.webp" alt="">
+        </div>
           <a href="om-oss.html">OM OSS</a>
           <!-- Mangler H-tag, vurderte å bruke figcaption istedenfor men siden det ikke er noe krav på at overskrift må være med brukes heller a tagg -->
-          
-
       </section>
   
        
-         
        <section id="sec-3">
-        <img src="img/Host/host_couple_boots_uglydog0_from_5688709.webp" alt="Bilde av ett par som sitter å drikker kaffe med en hund, bilde fra 5688709"> <!-- width="auto" height="auto"> -->
+        <div role="img" aria-label="Bilde av ett par som sitter å drikker kaffe med en hund, bilde fra 5688709">
+          <img src="img/Host/host_couple_boots_uglydog0_from_5688709.webp" alt=""> 
+        </div>
         <a href="#">HØSTNYHETER</a>
         <!-- Mangler H-tag, vurderte å bruke figcaption istedenfor men siden det ikke er noe krav på at overskrift må være med brukes heller a tagg -->
-      
-        
-
       </section> 
       
 
       <section id="sec-4">
-        <img src="img/Ninos/ninos_converse_fromSplitShire.webp" alt="Bilde av jente som sitter på fjell, med sorte Converse-sko, bilde fra SplitShire"> 
+        <div role="img" aria-label="Bilde av jente som sitter på fjell, med sorte Converse-sko, bilde fra SplitShire">
+          <img src="img/Ninos/ninos_converse_fromSplitShire.webp" alt=""> 
+        </div>
         <a href="#">KIDDOS</a>
-       
-      
       </section>
     </section>
     </main>

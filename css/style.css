@@ -434,7 +434,7 @@ main section img {
 
 #sec-5 p {
   width: 100%;
-  font-size: 48px;
+  font-size: 42px;
 
 }
 
@@ -471,7 +471,7 @@ main section img {
 
 #sec-seo p {
   width: 100%;
-  font-size: 48px;
+  font-size: 42px;
 }
 
 /* Style for seksjonen som omhandler UU: sec-uu */
@@ -492,7 +492,7 @@ main section img {
 }
 
 #sec-uu h2 {
-  font-size: 45px;
+  font-size: 52px;
 }
 
 #sec-uu h3 {
@@ -506,7 +506,7 @@ main section img {
 
 #sec-uu p {
   width: 100%;
-  font-size: 48px;
+  font-size: 42px;
 }
 
 #breadcrumbs{
@@ -551,7 +551,8 @@ main section img {
 }
 
 #changes-0 p {
-  font-size: 48px;
+  width: 100%;
+  font-size: 42px;
 }
 
 #del-3 {
@@ -572,11 +573,68 @@ main section img {
 #del-3 h3 {
   font-size: 50px;
 }
+#del-3 h4 {
+  font-size: 45px;
+}
 
 #del-3 p {
   width: 100%;
-  font-size: 48px;
+  font-size: 42px;
+}
 
+
+#del-4 {
+  display: flex;
+  flex-direction: column;
+  background-color: #baa1f1;
+  padding: 2rem;
+}
+#del-4 h1 {
+  font-size: 55px;
+}
+#del-4 h2 {
+  font-size: 52px;
+}
+
+#del-4 h3 {
+  font-size: 50px;
+}
+
+#del-4 h4 {
+  font-size: 45px;
+}
+
+#del-4 p {
+  width: 100%;
+  font-size: 42px;
+}
+
+#del-5 {
+  display: flex;
+  flex-direction: column;
+  background-color: #fa93b6;
+  padding: 2rem;
+}
+
+#del-5 h1 {
+  font-size: 55px;
+}
+
+#del-5 h2 {
+  font-size: 52px;
+}
+
+#del-5 h3 {
+  font-size: 50px;
+}
+
+#del-5 h4 {
+  font-size: 45px;
+}
+
+#del-5 p {
+  width: 100%;
+  font-size: 42px;
 }
 
 /* Style for footer */ 

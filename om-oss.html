@@ -44,17 +44,15 @@
 <body>
      <!-- Skip til hovedmeny som dukker opp ved trykk på TAB-knapp-->
      <a href="index.html" class="skip-to-main-content-link">Snarvei til hovedinnholdet</a>
+     <section id="hovedinnhold" tabindex="-1">  </section>
   <!-- grid container-->
   <div id="grid-container">
     <header>
-
-          <section id="hovedinnhold" tabindex="-1">  </section>
-
-         <!-- Søkebar-->    
-          <form> 
+            <!-- Søkefelt hvis ønskeskelig--  <form> 
         <input type="search" placeholder="Søk her..." title="Search">
         <button type="submit" title="Search..">Søk..<i class="fa-solid fa-magnifying-glass"></i> </button>
       </form>
+      -->
       <nav>
         <ul class="navbar">
           <li><a href="index.html">HJEM</a> </li>
@@ -65,14 +63,8 @@
           <li><a href="analyse.html">ANALYSE</a> </li>
           </ul>
 
-  <!-- Denne vil gjøre at de som kun bruker tastatur kan komme til hovedsiden -->
-        <p id="main" tabindex="-1"></p>
-   
-
       </nav>
 
-        
-     
     </header>
 
     <!-- Aside/sidedel -->
@@ -105,7 +97,9 @@
   
             <!-- Overskrift for seksjon Historie i seksjon sec-0-->
             <h2>Historie</h2>
-            <img src="img/om_oss/statue_fra_C1_superstar.webp" alt="Bilde av kulturisk og historisk sted, bilde fra C1 superstar"> 
+            <div role="img" aria-label="Bilde av kulturisk og historisk sted, bilde fra C1 superstar">
+              <img src="img/om_oss/statue_fra_C1_superstar.webp" alt="">
+            </div>
             <p>
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
               Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. <br>
@@ -122,7 +116,10 @@
   
             <!-- Overskrift for daglig leder i seksjon sec-1-->
             <h2>Daglig leder</h2>
-            <img src="img/om_oss/businesswoman.webp" alt="Bilde av foretningsdame. Bilde fra Gerd Altmann">
+            <div role="img" aria-label="Bilde av foretningsdame. Bilde fra Gerd Altmann">
+              <img src="img/om_oss/businesswoman.webp" alt="">
+            </div>
+            
            <p>
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, 
             similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
@@ -140,7 +137,9 @@
 
             <!-- Overskrift i sec-2 som inneholder ledig stilling-->
             <h2>Ledige stillinger</h2>
-            <img src="img/om_oss/people.webp" alt="Bilde av personer som har møte, bilde fra Werner Heiber"> <!-- width="auto" height="auto"> -->
+            <div role="img" aria-label="Bilde av personer som har møte, bilde fra Werner Heiber">
+              <img src="img/om_oss/people.webp" alt="">
+            </div>
             <p>Un texto que indica que se buscan nuevos empleados.</p>
           </section>
 

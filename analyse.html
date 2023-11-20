@@ -11,9 +11,9 @@
     content="Oblig 4 i webutvikling, Louise Fosdahl om nettside som selger sko.">
 
  <!-- Linker til ikonene fra fontawesome -->
-  <link href="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg" rel="stylesheet">  <!-- Link til snapchat ikon-->
-  <link href="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg" rel="stylesheet"> <!-- Link til facebook ikon -->
-  <link href="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg" rel="stylesheet"> <!-- Link til instagram ikon -->
+ <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg"> <!-- Link til snapchat ikon-->
+ <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg"> <!-- Link til facebook ikon -->
+ <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg"> <!-- Link til instagram ikon -->
   
   <!-- Linker til css stilark -->
   <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -39,24 +39,21 @@
 
 </head>
 <body>
+ 
   <!-- Skip til hovedmeny som dukker opp ved trykk på TAB-knapp-->
          <a href="index.html" class="skip-to-main-content-link">Snarvei til hovedinnholdet</a>
   <!-- Denne vil gjøre at de som kun bruker tastatur kan komme til hovedsiden flere ganger istedenfor
        at den kommer opp èn gang per sidenedlastning -->
-         <p id="main" tabindex="-1"></p>
-
-
+       <section id="hovedinnhold" tabindex="-1">  </section>
+      
   <!-- Grid container -->
   <div id="grid-container">
     <header>
-   <!-- tilgjengelighet-->
-          <section id="hovedinnhold" tabindex="-1">  </section>
-
-   <!-- Søkebar-->
-        <form> 
+   <!-- Søkefelt hvis ønskeskelig-->
+   <!-- <form> 
         <input type="search" placeholder="Søk her..." title="Search">
         <button type="submit" title="Search..">Søk..<i class="fa-solid fa-magnifying-glass"></i> </button>
-      </form>
+      </form>-->
 
       <nav id="main-nav">
         <ul class="navbar">
@@ -65,7 +62,6 @@
          <li><a href="om-oss.html">OM OSS</a> </li>
          <li><a href="produkt.html">CONVERSE</a> </li>
          <li><a href="#">NYHETER</a> </li>
-         <li><a href="#">TILBUD</a></li>
          <li><a href="analyse.html">ANALYSE</a> </li>
         </ul>
       </nav>
@@ -74,10 +70,11 @@
     <aside role="complementary">
       <section> 
             <ul>
-               <li><a href="om-oss.html">OM OSS</a> </li>
-               <li><a href="#">CONVERSE</a> </li>
-               <li><a href="#">NYHETER</a> </li>
-               <li><a href="#">TILBUD</a></li>
+              <li><a href="converse-produkt.html">PRODUKT</a> </li>
+              <li><a href="om-oss.html">OM OSS</a> </li>
+              <li><a href="produkt.html">CONVERSE</a> </li>
+              <li><a href="#">TILBUD</a></li>
+              <li><a href="analyse.html">ANALYSE</a> </li>
             </ul>
       </section>
      </aside>
@@ -97,7 +94,8 @@
         <section id="sec-5">
            <H2>DEL 2 ANALAYSE</H2>
           <br>
-          <h2>Nøkkelord</h2>
+          <h3>Nøkkelord</h3>
+
  <!-- Valgt å bruke <strong> i hvert første ord, for å vise at det er nytt avsnitt. 
   Det kan fort bli uoversiktlig om det er for mye tekst, og kan være vanskelig å vite hvor langt man har lest om brukeren faller ut av tekst-lesing-->
           <p>
@@ -157,7 +155,7 @@
           
             <ul>
               <!-- Lager en  uordnet liste med forslag til nøkkelord. Bruker <strong> for å utheve nøkkelordene, mens forklaringen er i vanlig tekst form-->
-                <h2>Nøkkelord liste</h2>
+                <h3>Nøkkelord liste</h3>
               <li><strong>Converse nyheter</strong></li>
               <li><strong>Converse Blue Green</strong></li>
               <li><strong>Converse Kidz</strong>, bytter ut S med Z. </li>
@@ -220,16 +218,15 @@
 
        <!-- SEKSJON FOR SEO-->
        <section id="sec-seo">
-        <h2>SEO analyse</h2>
+        <h3>SEO analyse</h3>
         <p>
           Dette er en avgjørende del av digital markedsføring i dagens samfunn. Høy grad av viktighet, siden det er viktig å være synlig for besøkende og poteniselle kunder i en verden der det er høy konkurranse om å få kundene. 
-          Denne analysen hjelper til for å forstå og forbedre virksomhetens synlighet og ytelse når det kommer til søkemotorer.  
+          Denne analysen hjelper til for å forstå og forbedre virksomhetens synlighet og ytelse når det kommer til søkemotorer.  </p>
           <br>
            <br>
-
+          <p>
           Den går ut på å evaluere og analysere nettsidens organiske synlighet og dens prestasjon i søkemotor som innebærer å undersøke de ulike faktorer som har en påvirkning for synligheten, og identisere områder på siden som 
           kan endres for å forbedre økningen og tiltrekke mer organisk trafikk. Grundig SEO-analyse innebærer å se på tekniske og innholdsmessige aspekter  på et nettsted.
-
         </p>
         <br>
   
@@ -263,19 +260,13 @@
       <div role="img" aria-label="bilde av accessibility med poeng på 92 i lighthouse">
         <img src="img/OBLIG-4/ACCESSIBILITY_INDEX_FIRST.png" alt="">
   </div>
-
-      
-      <br>      
+        
       <p>
         Her kommer det frem at bakgrunn og forgrunn farger ikke har tilstrekkelig kontrastforhold. Tekst med lav kontrast er vanskelig eller umulig å lese for mange brukere. Dette gjelder for navigasjonsmenyen i footer
         som har en lysegrønn farge.  </p>
         <div role="img" aria-label="bilde av mobil vennlighet der det ikke er ikke riktig størrelse">
           <img src="img/OBLIG-4/ACCESSBILITY_MOBIL.png" alt="">
           </div>
-       
-
-
-     
       <br>
       
 
@@ -286,8 +277,6 @@
       <div role="img" aria-label="bilde av 91 poeng i lighthouse av best practise ..">
         <img src="img/OBLIG-4/BEST_PRACTISE_FIRST_91.png" alt="">
       </div>
-     
-      
       <p>
         Her registreres det en avlastningslytter (unload listener). Unload-hendelsen utløses ikke pålitelig og å lytte etter den kan forhindre nettleseroptimaliseringer som back-forward cache. Her kan 
         pagehide eller synlighetsendring-hendelser istedenfor. 
@@ -305,20 +294,20 @@
         <img src="img/OBLIG-4/PERFORMANCE_INDEX_FIRST_.png" alt="">
        </div>
      
-      <p>
+      
         Bildefilene er store og bruker derfor lenger tid når det gjelder nedlastningstid. Dette er forhold som er viktig, brukere/kunder vil vurdere det negativt om siden er treg og det kan resultere i 
         å miste kunder til andre konkurrenter som har en raskere nedlastningstid. JPEG og PNG filer tar større plass. Beste er å lagre bilder i next-gen formater som Webp og AVIF for bedre komprimering og
-        vil gi raskere nedlasdtninger og mindre dataforbruk.   </p>
+        vil gi raskere nedlasdtninger og mindre dataforbruk.   
         <br>
 
-        <p>Bilde elementer har ikke eksplisitt width og height (bredde og høyde). Dette kan redusere layoutforskyvninger og forbedre CLS.  </p>
+        Bilde elementer har ikke eksplisitt width og height (bredde og høyde). Dette kan redusere layoutforskyvninger og forbedre CLS.  
         <br>
 
-        <p>Side forhindret tilbake og forover buffergjennoppretting. Mange navigasjioner utføres ved å gå tilbake til forrige side eller forover igjen. TIlbake/frem- cachen (bfcache)
+        Side forhindret tilbake og forover buffergjennoppretting. Mange navigasjioner utføres ved å gå tilbake til forrige side eller forover igjen. TIlbake/frem- cachen (bfcache)
         kan fremskynde disse returnnavigasjonene. 
 
         Her spiller også program som kjøres på min personlige maskin inn som heter Kaspersky. I forhold til koden på nettsiden er det mindre å gjøre derfra som kan bedre dette, som går som "3rd-party resources"
-        som har en effekt i disse: enable text compression, url, reduce unused css. </p>
+        som har en effekt i disse: enable text compression, url, reduce unused css. 
       
 
         <br>
@@ -335,7 +324,7 @@
         <br>
         <br>
         <p>
-        <h4>SERVE IMAGES IN NEXT-GEN FORMATS / VIS BILDER I NESTE GENERASJONS FORMATER</h4> 
+        <h3>SERVE IMAGES IN NEXT-GEN FORMATS / VIS BILDER I NESTE GENERASJONS FORMATER</h3> 
         <p>
         Bildeformater som WebP og AVIF gir ofte bedre komprimering enn PNG og JPEG som er brukt i dette tilfelle, dette kan hjelpe med raskere nedlastninger og mindre dataforbruk. 
         Ressursstørrelse er 559.2KiB. Potensiell sparing vil være 276.6KiB for alle bilder som er brukt. 
@@ -367,7 +356,7 @@
 
 
 
-      <h2>Produkt.html</h2>
+      <h3>Produkt.html</h3>
       <br>
       <div role="img" aria-label="bilde av av alle typer i lgihthouse for produkt">
         <img src="img/OBLIG-4/PRODUCT_SEO_FIRST.png" alt="">
@@ -584,12 +573,14 @@
       </div>
       <p>Her er det som kan forbedres på performance i om-oss filen.</p>
       
-        <p>Legger ved pdf av lighthouse rapporten.</p>
-        <object data="img/OBLIG-4/ImgOblig4/All_cheks_LIGHTHOUSE_Index.pdf" type="application/pdf" width="100" height="500">
-          <p>Kan ikke pdf vises, <a href="img/OBLIG-4/ImgOblig4/All_cheks_LIGHTHOUSE_Index.pdf">last ned</a> istedefor. </p>
-        </object> 
+     
 
-      <h2>DIAGNOSE OG FORKLARINGER</h2>
+        <h3>PDF fil av lighthouse, av index/hjem fil</h3>
+        <p>Åpne pdf fil her <a href="img/OBLIG-4/ImgOblig4/All_cheks_LIGHTHOUSE_Index.pd">her</a>.</p>
+
+        
+
+      <h3>DIAGNOSE OG FORKLARINGER</h3>
       <P>
         <strong>iMAGE ELEMENT DO NOT HAVE EXPLICIT/BILDEELEMENTER HAR IKKE ESKPLISITT BREDDE OG HØYDE  </strong>
         <br>
@@ -651,20 +642,20 @@
 
        <!-- ChatGPT artikkel i seksjonen Sec-seo -->
        <article>
-        <h2>ChatGPT</h2>
+        <h3>ChatGPT</h3>
         <p>
           Først sendte jeg koden, så fikk jeg spørsmål om hva jeg ønsket at den skulle gjøre for meg og da var svaret fra meg "Consider the code from an SEO and UU perspective and then specific soloutions". 
          </p>
          <p>
           All kode er kopiert inn, både index.html, om-oss.html, produkt.html og style.css. Svaret fra ChatGPT: 
         </p>
-        <h4>General Recommendations:</h4>
+        <h3>General Recommendations:</h3>
         <div role="img" aria-label="Bilde av screenshot av chatGPT sin anbefaling">
           <img src="img/OBLIG-4/ImgOblig4/ChatGPT_general_recom.png" alt="">
         </div>
         <br>
         
-        <h4>Specific Recommendations</h4>
+        <h3>Specific Recommendations</h3>
         <div role="img" aria-label="Bilde av screenshot av ChatGPT sin spesifikk anbefalinger">
           <img src="img/OBLIG-4/ImgOblig4/ChatGPT_spesific_recom.png" alt="">
           </div>
@@ -673,7 +664,7 @@
 
        <!-- Artikkel av tabell i seksjonen sec-seo-->
        <article>
-        <h2>Tabell som viser forskjellene</h2>
+        <h3>Tabell som viser forskjellene</h3>
         <p>Denne tabellen viser forskjellene fra resultater fra Lighthouse, Wave og ChatGPT.</p>
          <!-- Aria -->
          <div role="img" aria-label="Bilder fra ChatGPT av anbefalinger og spesifikke anbefalinger">
@@ -690,7 +681,7 @@
 
         
        <section id="sec-uu">
-        <h2>UU ANALYSER </h2>
+        <h3>UU ANALYSER </h3>
         <p>
           <strong>UU er en universiell utforming som handler om tilrettelegging av samfunnet, uavhengig om du har utfordringer eller ikke- også på det tekniske eller digitale spekteret. 
             Verktøyene går ut ulike måter for å sjekke om alle UU-krav er tilstede, finnes både som programmer og tilleggspakker for nettleser. 
@@ -705,9 +696,9 @@
         </div>
         <br>
        
-        <h3>Detaljer</h3>
-        <p>
-          <h4>Alerts: Redudant link:</h4>
+        <h2>Detaljer</h2>
+        
+          <h3>Alerts: Redudant link:</h3>
           <p>
           Her er det en tilstøtende/nærliggende lenke, som går til samme url som i dette tilfelle er både i index.html(Hjem) og om-oss.html (Om Oss) - vil si at den har en annen hyperlink ved siden av seg som leder til samme adresse. 
           Her er en løsning å kombinere den tilstøtende lenken til den andre og deretter fjerne tekst eller alternativ tekst som den tilstøtende/redudant link har. 
@@ -715,7 +706,7 @@
         </p>
 
           <br>
-          <h4>Features:</h4>
+          <h3>Features:</h3>
           <p> Bilder: 
           På siden er det 5 bilder med alternativ tekst. For.eks. alt=»tekst» i html filen. Det er en viktig funksjon for bilde, når det gjelder tilgjengelighet. 
           Er bildene ikke tilgjengelig (situasjoner der bilder ikke vises på enkelte skjermer eller rett og slett ikke tilgjengelig), så foreligger det tekst om det bilde som ikke vises og det vil alle ha tilgang på,
@@ -723,54 +714,54 @@
           Nå har jeg kun referert til fotograf, men her kunne jeg skrevet mer konkret som f.eks. «brun lav sko».
         </p>   
 
-          <h4>Linker:</h4> Alternativ tekst er tilstede for et bilde som er innenfor en lenke, som er gjort på nettsiden. 
+          <h3>Linker:</h3> Alternativ tekst er tilstede for et bilde som er innenfor en lenke, som er gjort på nettsiden. 
           Dette er viktig å inkludere alternativ passende tekst, for det sikrer at funksjonen og formålet med lenken og dets innhold er tilgjengelig for brukere av skjermlesere 
           eller når bilder er utilgjengelige. 
 
-         <h4>Strucural elements:</h4>
+         <h3>Strucural elements:</h3>
          <br>
 
-          <h4>H1:</h4> Handler om at H1 elementet er tilstede. 
+          <h3>H 1:</h3> Handler om at H1 elementet er tilstede. 
           <p>
           Dette er viktig siden overskrifter letter sidenavigasjonen for brukere av hjelpemidler, i tillegg som også gir semantisk og visuell mening og struktur til dokumentet. 
           Første overskrift (H1) bør inneholde det viktigste på siden.
         </p>  
           <br>
 
-          <h4>Unordered list:</h4>
+          <h3>Unordered list:</h3>
           <p> En punktliste er tilstede. Dette er viktig for uordnende lister presenterer en gruppe relaterte, parallelle elementer. 
           Brukere av hjelpeteknologier kan navigere etter og innenfor lister. Her bør den uordnet listen være passende for konteksten. 
           Hvis listeelementer er sekvensielle eller nummererte, vil en ordnet liste ol muligens være mer passende. 
         </p>
           <br>
 
-          <h4>Header:</h4>  
+          <h3>Header:</h3>  
           <p>
           >Et header-element er tilstede. Det er viktig å kunne identifisere sideintroduksjon eller navigering. 
           Det inngår vanligvis i nettsidens logo, topp-navigasjonen eller annet. Overskrifter forenkler sidesemantikk og navigering. 
         </p>
           <br>
 
-          <h4>NAV:</h4> 
+          <h3>NAV:</h3> 
           <p>Nav-elementet er tilstede. Det er en viktig del siden navigasjonen identifiserer en del av navigasjonslenker og kan forenmkle sidesemantikk og navigering. 
           Viktig at elementet definerer sidenavigering. Er det flere navigasjonselementer på samme side kan det differensieres med ARIA-etiketter.
         </p>
           <br>
 
-          <h4>Main content:</h4>  
+          <h3>Main content:</h3>  
           <p>Main-elementet er tilstede. Main elementet eller main-attributtet indentifiserer hovedinnholdet på siden. Det forenkler sidesemantikk og navigering. 
           Viktig at elementet omgir og definerer sidens hovedinnhold. 
         </p>
           <br>
 
-          <h4>Footer:</h4> 
+          <h3>Footer:</h3> 
           <p>Footer elementet er tilstede. Det er viktig å identifiserer en bunntekst for siden. 
           Her identifiseres gjerne relaterte linker, opphavsrett, forfatterskap og annet bunntekstinnhold. Det å bruke bunntekst forenkler sidesemantikk og navigering. 
           Viktig at elementet omgir og definerer bunntekstinnhold på siden.
         </p>
           <br>
 
-          <h4>Aside:</h4> 
+          <h3>Aside:</h3> 
           <p>Elementet Aside er tilstede. En side identifiserer sekundært, relatert eller komplementært innhold som vanligvis ligger i et sidefelt. 
           </p>
         <br>
@@ -791,7 +782,7 @@
           <img src="img/OBLIG-4/ImgOblig4/structure_produkt_Wave.png" alt="">
           </div>
        
-        <h3>Detaljer</h3>
+        <h2>Detaljer</h2>
         <br>
 
         <p>
@@ -831,7 +822,7 @@
         </p>
         <br>
 
-       <h4>Kontraster</h4>
+       <h3>Kontraster</h3>
        <div role="img" aria-label="Kontrast av produkt fil på Wave">
         <img src="img/OBLIG-4/ImgOblig4/contrast_produkt_Wave.png" alt="">
         </div>
@@ -900,19 +891,19 @@
 
     <!-- Seksjon av endringer som er gjort: changes-0-->
       <section id="changes-0">
-        <h2> 
+        <h3> 
           ENDRINGER I INDEX.HTML
-        </h2>
+        </h3>
          <br>
        
         <h3>ENDRINGER SOM ER GJORT</h3>
-        <h4>Nåværende poeng:</h4>
+        <h3>Nåværende poeng:</h3>
         <div role="img" aria-label="Bilde av screenshot av nåværende poeng fra lighthouse">
           <img src="img/OBLIG-4/ImgOblig4/LIGHTHOUSE_INDEX_PROSENT.png" alt="">
          </div>
        
       
-        <h4>PERFORMANCE</h4>
+        <h3>PERFORMANCE</h3>
         <div role="img" aria-label="Bilde av screenshot av 68 prosent på performance">
           <img src="img/OBLIG-4/PERFOMANCE_INDEX_MOBIL_NEW.png" alt="">
         </div>
@@ -930,7 +921,7 @@
           Har lagt inn mer definert meta tag med width og initial-scale.  
         </p>
 
-        <H4>ACCESSIBILITY</H4>
+        <H3>ACCESSIBILITY</H3>
         <div role="img" aria-label="Bilde av screenshot av 100 av Accesibility i lighthouse">
           <img src="img/OBLIG-4/ACCESSIBILITY_INDEX_NEW_LIGHT.png" alt="">
           </div>
@@ -942,7 +933,7 @@
           </p>
           <br>
 
-          <h4>BEST PRACTICES</h4>
+          <h3>BEST PRACTICES</h3>
           <div role="img" aria-label="Bilde av screenshot av 95 av Best Practise i lighthouse">
             <img src="img/OBLIG-4/BEST_PRACTISE_INDEX_NEW.png" alt="">
             </div>
@@ -950,7 +941,7 @@
             Her går det negativt pga. programvaren Kaspersky. Den registrer en unload listener og har ikke sikret CSP for å reduserere muligheten for XXS-angrep.
           </p>
 
-          <h4>SEO</h4>
+          <h3>SEO</h3>
           <div role="img" aria-label="Bilde av screenshot med 100 i SEO">
             <img src="img/OBLIG-4/SEO_INDEX_FULL_MOLBIL.png" alt="">
             </div>
@@ -965,18 +956,25 @@
           </p>
           <br>
 
-           <!-- Lagt til pdf fil av nyeste lighthouse analyse-->
-          <h4>LIGHTHOUSE FOR INDEX/HJEM FIL, FINNES I PDF HER: </h4>
-          <object data="img/OBLIG-4/ImgOblig4/LIGHTHOUSE_INDEX_MOBIL_NEW.pdf" type="application/pdf" width="100" height="500">
+           <!-- Lagt til pdf fil av nyeste lighthouse analyse-
+          <h3>LIGHTHOUSE FOR INDEX/HJEM FIL, FINNES I PDF HER: </h3>
+          <object data="img/OBLIG-4/ImgOblig4/LIGHTHOUSE_INDEX_MOBIL_NEW.pdf" type="application/pdf" width="100%" height="500px">
             <p>Kan ikke pdf vises, <a href="img/OBLIG-4/ImgOblig4/LIGHTHOUSE_INDEX_MOBIL_NEW.pdf">last ned</a> istedefor. </p>
-          </object>
+          </object> -->
           <br>
 
+          <h3>PDF fil av lighthouse, av index/hjem fil</h3>
+            <p>Åpne pdf fil her <a href="img/OBLIG-4/ImgOblig4/LIGHTHOUSE_INDEX_MOBIL_NEW.pdf">her</a>.</p>
 
-          <h2>
+            <div role="img" aria-label="Bilde av index siden etter endringer på Wave">
+              <img src="img/OBLIG-4/WAVE_FERDIG_INDEX.png">
+            </div>
+
+
+          <h3>
             ENDRINGER I PRODUKT.HTML
-           </h2>
-          <h4>Nåværende poeng:</h4>
+           </h3>
+          <h3>Nåværende poeng:</h3>
           <div role="img" aria-label="Bilde av screenshot av lighthouse for mobil av produkt fil">
             <img src="img/OBLIG-4/ImgOblig4/lighthouse_produkt_mobil.png" alt="">
           </div>
@@ -984,7 +982,7 @@
           <br>
 
          
-            <h4>PERFORMANCE</h4>
+            <h3>PERFORMANCE</h3>
             <div role="img" aria-label="Bilde av screenshot av prosent oppfylt på Performance">
               <img src="img/OBLIG-4/ImgOblig4/performance_produkt.png" alt="">
             </div>
@@ -1003,7 +1001,7 @@
           </P>
 
           
-            <h4>ACCESSIBILITY</h4>
+            <h3>ACCESSIBILITY</h3>
             <div role="img" aria-label="Bilde av screenshot av 100 i Accesibility">
               <img src="img/OBLIG-4/ImgOblig4/accessibility_produkt_mobil.png" alt="">
               </div>
@@ -1016,7 +1014,7 @@
               Har endret på aria. Footer tekst er mer tydelig. 
             </P>
 
-            <h4>BEST PRACTISE</h4>
+            <h3>BEST PRACTISE</h3>
             <div role="img" aria-label="Bilde av screenshot av 95 prosent i best practise">
               <img src="img/OBLIG-4/best_practise_produkt_mobil.png" alt="">
              </div>
@@ -1028,12 +1026,10 @@
             </p>
 
 
-            <h4>SEO</h4>
+            <h3>SEO</h3>
             <div role="img" aria-label="Bilde av screenshot av 100 for SEO">
               <img src="img/OBLIG-4/SEO_PRODUKT_MOBIL.png" alt="">
             </div>
-            <br>
-            
             <p>
               Her har jeg endret på meta-dataen (på alle sidene) for å være mer spesifikk, som optimiserer for mer mobil-vennlige størrelser og hjelper mot delay i user input. 
               Linkene er mer detaljerte om informasjon. Linkene er nå crawlable. Har nå alt attributter på alle sider. Tekstern er endret, til en større font for at det er mulig for alle uavhegig bakgrunn å lese. 
@@ -1043,21 +1039,31 @@
             <br>
 
              <!-- Lagt til pdf fil av nyeste lighthouse analyse-->
-            <h4>LIGHTHOUSE FOR PRODUKT HTML FIL, FINNES I PDF HER: </h4>
-            <object data="img/OBLIG-4/ImgOblig4/NEW_LIGHTHOUSE_PRODUKT.pdf" type="application/pdf" width="100" height="500">
+             <!-- 
+            <h3>LIGHTHOUSE FOR PRODUKT HTML FIL, FINNES I PDF HER: </h3>
+            <object data="img/OBLIG-4/ImgOblig4/NEW_LIGHTHOUSE_PRODUKT.pdf" type="application/pdf" width="100%" height="500px">
               <p>Kan ikke vise pdf. <a href="img/OBLIG-4/ImgOblig4/NEW_LIGHTHOUSE_PRODUKT.pdf">Last ned</a>istedenfor. </p>
-            </object>
+            </object> -->
+
+            <h3>PDF fil av lighthouse, i produkt fil</h3>
+            <p>Åpne pdf fil her <a href="img/OBLIG-4/ImgOblig4/NEW_LIGHTHOUSE_PRODUKT.pdf">her</a>.</p>
+
+            <h3>Endringer på Wave, produkt fil som er utgått</h3>
+            <div role="img" aria-label="Bilde av produkt side som er utgått">
+              <img src="img/OBLIG-4/WAVE_PRODUKT_UTGAATT.png" alt="">
+            </div>
+        
 
 
 
-            <h2>ENDRINGER I OM-OSS FIL</h2>
-            <H4>Nåværende poengsum:</H4>
+            <h3>ENDRINGER I OM-OSS FIL</h3>
+            <H3>Nåværende poengsum:</H3>
             <div role="img" aria-label="Bilde av screenshot av Lighthouse, Om oss fil">
               <img src="img/OBLIG-4/LIGHTHOUSE_OM_OSS_NUEVO.png" alt="">
              </div>
             
 
-            <h4>PERFORMANCE</h4>
+            <h3>PERFORMANCE</h3>
             <div role="img" aria-label="Bilde av screenhsot fra Performance">
               <img src="img/OBLIG-4/PERFORMANCE_OM_OSS_NUEVO.png" alt="">
              </div>
@@ -1067,7 +1073,7 @@
             </p>
 
             
-          <h4>ACCESSIBILITY</h4>
+          <h3>ACCESSIBILITY</h3>
           <div role="img" aria-label="Bilde av screenshot av 100 poeng i Lighhouse fra Accesibility">
             <img src="img/OBLIG-4/ACCESSIBILITY_OM_OSS_NUEVO.png" alt="">
           </div>
@@ -1078,7 +1084,7 @@
          <br>
 
            
-        <h4>BEST PRACTISE</h4>
+        <h3>BEST PRACTISE</h3>
         <div role="img" aria-label="Bilde av screenshot av popengsum på 95 i Best practise">
           <img src="img/OBLIG-4/BEST_PRACTISE_NUEVO.png" alt="">
         </div>
@@ -1088,7 +1094,7 @@
           Samme som i index.html og produkt.html. 
         </p>
 
-        <h4>SEO</h4>
+        <h3>SEO</h3>
         <div role="img" aria-label="Bilde av screenshot av 100 i SEO fra lighthouse">
           <img src="img/OBLIG-4/SEO_OM_OSS_NUEVO.png" alt="">
          </div>
@@ -1099,36 +1105,57 @@
         </p>
         <br>
 
-        
-        <!-- Lagt til pdf fil av nyeste lighthouse analyse-->
-        <object data="img/OBLIG-4/ImgOblig4/LIGHTHOUSE_OM_OSS_NEW.pdf" type="application/pdf" width="100" height="500">
-          <p>Kan ikke pdf vises, <a href="img/OBLIG-4/ImgOblig4/LIGHTHOUSE_OM_OSS_NEW.pdf">last ned </a> istedenfor.</p>
-        </object> 
+
+        <h3>PDF fil av lighthouse, om oss fil</h3>
+        <p>Open pdf fil her <a href="img/OBLIG-4/ImgOblig4/LIGHTHOUSE_OM_OSS_NEW.pdf">her</a>.</p>
+
+        <div role="img" aria-label="Bilde av Om oss filen tatt ferdig resultat på Wave">
+          <img src="img/OBLIG-4/WAVE_CHANGES_OM_OSS.png" alt="">
+        </div>
+        <p>Endringer i Wave med aria. Fortsatt redudant link pga index.fil. </p>
 
 
         <h3>Produktet Converse fil</h4>
           <p>I og med at jeg laget en produktside på nytt, for var usikker på om det var rett å gjøre som jeg gjorde på andre måten og i tillegg kunne legge
             inn spesifikke metadata og mikrodata på et spesifikt produkt så måtte jeg ta en lighthouse analyase på denne siden også. Den bygde jeg opp av 
             endringer som er gjort. 
-            Under legger jeg ved lighthouse analysen for første (og siste analyse), siden det meste er laget etter endringene så blir alt lagt inn i seksjonen "endring". 
+          </p>
+           <p> Under legger jeg ved lighthouse analysen for første (og siste analyse), siden det meste er laget etter endringene så blir alt lagt inn i seksjonen "endring". 
             Har ikke gjort andre endringer enn som de første filene. </p>
-            <br>
+           
             <p>Produktfilen finnes fortsatt, i navigasjonsmenyen er det Converse. </p>
-            <br>
+            
             <p>Ettersom jeg la til søkefelt på alle sider, tok jeg en analyse der den viste at jeg hadde for lite rom mellom elementene. Dette er endret. </p>
-            <br>
-        <object data="img/OBLIG-4/ImgOblig4/converse-produkt_fil_first.pdf" type="application/pdf" width="100" height="500">
+          
+            <!-- 
+        <object data="img/OBLIG-4/ImgOblig4/converse-produkt_fil_first.pdf" type="application/pdf" width="100%" height="500px">
           <p>Kan ikke pdf vises, <a href="img/OBLIG-4/ImgOblig4/converse-produkt_fil_first.pdf">last ned</a> istedenfor. </p>
-        </object>  
+        </object>  -->
+
+        <h3>PDF fil av lighthouse, i produkkt-converse fil</h3>
+        <p>Åpne pdf fil her <a href="img/OBLIG-4/ImgOblig4/converse-produkt_fil_first.pdf">her</a>. </p>
+
+        <h3>Etter endringer i Wave: </h3>
+        <div role="img" aria-label="Bilde av produkt-converse filen etter endringer">
+          <img src="img/OBLIG-4/Wave_produkt_siden_ny.png" alt=""> 
+        </div>
+        <p>Utfallet etter endringer, etter siste analyse på Wave for converse-produkt filen. </p>
+
+        <h3>Wave av denne siden, analyse</h3>
+        <div role="img" aria-label="Screenshot av denne sidens (analyse-html) i Wave">
+          <img src="img/OBLIG-4/WAVE_ANALYSE_FIL.png" alt="">
+        </div>
+
+
 
 
       </section>
 
       <!-- Lager en egen seksjon til del 3 (innen flex sec)-->
       <section id="del-3">
-        <h2>
+        <h3>
           Del 3: Tilgjengelighet 
-        </h2>
+        </h3>
        
 
         <h3>
@@ -1151,25 +1178,42 @@
           <img src="img/OBLIG-4/skip_to_mainhtml.png" alt="">
           </div>
           <p>Har lagt inn en skip-kode, som er på alle sidene så trykkes TAB tast på vil den dukke opp og kan trykkes enter på for å komme til 
-            hovedsiden. Testet koden om den gjaldt uten å måtte reloade siden, da ville den kun komme opp en gang per sidenedlastning. La derfor til 
+            hovedsiden. </p>
+
+            <p> Testet koden om den gjaldt uten å måtte reloade siden, da ville den kun komme opp en gang per sidenedlastning. La derfor til 
           en kodebit til så den er tilgjengelig hele tiden. </p>
 
         <div role="img" aria-label="Screenshot av css kode for skip til hovedsiden">
           <img src="img/OBLIG-4/SKIP_TO_MAIN_CSS_CODE.png" alt="">
         </div>  
-        <p>Kode i css for skip til hovedsiden. </p>
+        <h4>Kode i css for skip til hovedsiden. </h4>
 
 
       
 
         <h3>Aria attributter</h3>
         <p>Nå tolker jeg at det ikke skal endres av det som allerede går som semantisk. Men jeg legger til ARIA som ikke gir meg feilemeldinger. 
-          Har endret på alle img - elementer. Fjernet den alternative teksten som var før jeg la inn div role="img" aria-label="beskrielse" så det ikke ender 
-        med en redudant link. Her hadde gjort en feil, så alle bildene måtte til analyse-siden måtte legges inn på nytt fordi mappenavnet ikke kune ha mellomrom i aria. 
-        Endret først til header elementet i aria, men det fikk jeg feilmelding på. 
+          Har endret på alle img - elementer. </p>
+
+          <p>Fjernet den alternative teksten som var før jeg la inn div role="img" aria-label="beskrielse" så det ikke ender 
+        med en redudant link.</p>
+       <p> 
+         Her hadde gjort en feil, så alle bildene måtte til analyse-siden måtte legges inn på nytt fordi mappenavnet ikke kune ha mellomrom i aria. 
+        Endret først til header elementet i aria, men det fikk jeg feilmelding på. </p>
+        <p>
         Men de fleste filene skal nå ha aria i navigasjonen, sidebar. 
-        Det vil gi flere div-tagger, i alle fall de elementene som allerede er tilstede. Anser som at nettsiden er relativ semtantisk.   </p>
+        Det vil gi flere div-tagger, i alle fall de elementene som allerede er tilstede. Anser som at nettsiden er relativ semtantisk.  </p>
         <br>
+        <p>Alle bildefiler på analyse-fil og converse-produkt er omgjort til Aria.</p>
+
+          <p> Der det ligger flere enn ett bilde, skulle det ikke trengt et alt attributt 
+          etter det jeg har lest men det ble ikke godkjent av validator. La derfor tilbake. </p>
+          <p>
+          Undersøkte på Wave om Aria ble godkjent, noe jeg fikk bekreftet. På analyse filen finnes det 105 aria-attributter. 
+        </p>
+        <div role="img" aria-label="Aria attributter på analyse filen">
+          <img src="img/OBLIG-4/ARIA_ANALYSE.png" alt="">
+        </div>
         <p>
        <strong>EDIT: </strong> har endret tilbake noen aria-attributter, som i header pg main til det som var fra før.  </p>
   
@@ -1179,11 +1223,12 @@
 
 
       </section>
-
+       <!--  Lager seksjopn for del 4 inne i flex-->
       <section id="del-4">
-        <h1>Mikrodata og rike resultater</h1>
+        <h3>Del 4: Mikrodata og rike resultater</h3>
         <p>Nå gjør jeg det på den måten som jeg føler er beste og vet at mange anbefaler (JSON) men jeg har lagt ved koden jeg la inn før jeg heller valgte JSON 
-          nederst på siden (converse-produkt).  </p>
+          nederst på siden (converse-produkt). </p>
+          <p>Selvom det ikke står noe spesifikt om det, så ligger det kode i kommentarfelt som jeg vurderte å ta med før jeg valgte JSON.  </p>
           <div role="img" aria-label="Bilde av resultat på rike resultater">
             <img src="img/OBLIG-4/RIKE_RESULTATER.png" alt="">
           </div>
@@ -1192,6 +1237,50 @@
 
 
       <section id="del-5">
+        <h3>Meta tags</h3>
+        <p>Det er lagt inn meta-tags på alle sidene som er tilpasset hvert enkelt sides egenskaper. </p>
+        <div role="img" aria-label="Bilde av meta tagger på på converse-produkt filen">
+          <img src="img/OBLIG-4/converse-produkt-META.png" alt="">
+        </div>
+        <h4>Meta tagger tilhørende converse-produkt filen, denne er produkt filen som oppgaven i oblig 3/4 nå hører til. </h4>
+        <br>
+
+        <div role="img" aria-label="Bilde av meta tagger på index filen">
+          <img src="img/OBLIG-4/META_tagger_index.png" alt="">
+        </div>
+        <h4>Meta tagger tilhørende index filen, dvs. hovedsiden eller landingssiden.</h4>
+        <br>
+
+        <div role="img" aria-label="Bilde av meta tagger på om oss filen">
+          <img src="img/OBLIG-4/META_tagger_om_oss.png" alt="">
+        </div>
+        <h4>Meta tagger tilhørende på om oss filen.</h4>
+        <br>
+
+        <div role="img" aria-label="Bilde av meta tagger på den utgåtte produkt filen">
+          <img src="img/OBLIG-4/META_produkt_gammel_side.png" alt="">
+        </div>
+        <h4>Meta tagger på den utgåtte produkt-siden.</4>
+        <br>
+
+        <H3>Kommentar</H3>
+        <p>
+          Som en som har lese og skrivefeil, kan det sikkert bli fort rotete med alle br tagger for andre å se 
+            koden men det er en eneste mulighet for meg å klare å sortere hver katagori og emne fra hverandre.
+        </p>
+        <p>
+          Det jeg bruker tjue timer på for å klare å sette inn riktige elementer i en kode tar sikkert typ to timer for andre. 
+        Det kan likevel være enkelte elementer som jeg ikke har klart å oppdaget selvom jeg har gått gjennom koden og teksten 
+      flere ganger. </p>
+      <p> 
+      Nå skal jeg ha gjort det som står i oppgave-tekstene. Selvom jeg har oppfylt brukervennligheten med font-størrelse osv 
+      og som selv har lese og skrivevansker- blir det altfor vanskelig for meg å skulle lese alt som er skrevet i vanlig dekstop. </p>
+      <p>Der må jeg heller bruke responsivt og sette den i mobilversjon. </p>
+      <p>
+      Nå er det heller ikke ønskelig at det skal være for mye farger men har likevel lagt bakgrunnsfarge under hver seksjon på 
+      analyse siden for å sortert noe. 
+   </p>
+
 
 
       </section>
