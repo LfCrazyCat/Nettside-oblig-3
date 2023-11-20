@@ -10,21 +10,22 @@
   name="description" 
   content="Oblig 4 i webutvikling, Louise Fosdahl om nettside som selger sko.">
 
+  <!-- Linker til ikonene fra fontawesome -->
+  <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg"> <!-- Link til snapchat ikon-->
+  <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg"> <!-- Link til facebook ikon -->
+  <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg"> <!-- Link til instagram ikon -->
+
+  <!-- Mikro Meta Data-->
   <meta property="og:title" content="Kule blå concverse fra Nettbutikk AS">
   <meta property="og:url" content="https://schema.org/AggregatRating">
   <meta property="og:description" content="Azul Converse zapatos es muy divertido">
   <meta property="og:image" content="https://pixabay.com/photos/shoes-sneakers-jeans-blue-converse-8026038/">
 
-    <!-- Keywords -->
-  <meta name="keywords" content="Converse, Shoes, Converse shoes, converse color, converse size, converse offer">
-
-  <!-- Linker til ikonene fra fontawesome -->
-  <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg"> <!-- Link til snapchat ikon-->
-  <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg"> <!-- Link til facebook ikon -->
-  <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg"> <!-- Link til instagram ikon -->
-  
+ 
   <!-- Linker til css stilark -->
 <link href="css/style.css" rel="stylesheet" type="text/css">
+
+<!-- Tittel på siden-->
   <title>Converse azul model</title>
 
    <!-- Bruker OpenGraph som blant annet Facebook/Meta bruker-->
@@ -38,54 +39,44 @@
    <meta name="twitter:description" content="Om Converse produktet på produkt fil">
    <meta name="twitter:image" content="#">
    <meta name="twitter:site" content="@oblig4nettbutikk">
+
+      <!-- Keywords -->
+  <meta name="keywords" content="Converse, Shoes, Converse shoes, converse color, converse size, converse offer">
 </head>
 
 <body>
         <!-- Skip til hovedmeny som dukker opp ved trykk på TAB-knapp-->
         <a href="index.html" class="skip-to-main-content-link">Snarvei til hovedinnholdet</a>
+         <!-- Denne vil gjøre at de som kun bruker tastatur kan komme til hovedsiden flere ganger istedenfor
+        at den kommer opp èn gang per sidenedlastning -->
+         <p id="main" tabindex="-1"></p>
+         
   <!-- Grid container -->
   <div id="grid-container">
     <header>
-    
-    
-          <section id="hovedinnhold" tabindex="-1">  </section>
 
-          
-      
         <!-- Søkebar som bare finnes på denne filen-->
         <form> 
-        <input type="search" placeholder="Søk her..." title="Search">
-        <button type="submit" title="Search..">Søk..<i class="fa-solid fa-magnifying-glass"></i> </button>
-      </form>
+         <input type="search" placeholder="Søk her..." title="Search">
+         <button type="submit" title="Search..">Søk..<i class="fa-solid fa-magnifying-glass"></i> </button>
+        </form>
       
 
       <nav id="main-nav">
-        
-       <!-- <a class="skip-main" href="index.html">Skip til hovedmenyen</a> --> 
-       
         <ul class="navbar">
-          <li><a href="index.html">HJEM</a></li>
-              <!-- <a href="index.html" class="skip">Skip to content</a> -->
-              <li><a href="converse-produkt.html">PRODUKT</a> </li>
-              <li><a href="om-oss.html">OM OSS</a> </li>
-              <li><a href="#">CONVERSE</a> </li>
-              <li><a href="#">NYHETER</a> </li>
-              <!-- Valgt å ikke fjerne selv om den er utgått siden SEO og UU analyser er tatt -->
-              <li><a href="produkt.html">UTGÅTT</a> </li>
-          </ul>
+          <li><a href="index.html">HJEM</a> </li>
+          <li><a href="converse-produkt.html">PRODUKT</a> </li>
+          <li><a href="om-oss.html">OM OSS</a> </li>
+          <li><a href="produkt.html">CONVERSE</a> </li>
+          <li><a href="#">TILBUD</a></li>
+          <li><a href="analyse.html">ANALYSE</a> </li>
+        </ul>
      
-  <!-- Denne vil gjøre at de som kun bruker tastatur kan komme til hovedsiden -->
-        <p id="main" tabindex="-1"></p>
-   
 
       </nav>
  </header>
- 
-
-
-
     <!-- Sidedel/Aside-->
-    <aside>
+    <aside role="complementary">
       <section>
         <!-- Er obs på at det ikke foreligger noen heading her-->
            <ul>
@@ -371,3 +362,11 @@
                 </div>
               </div>
             </div> -->
+
+            <!-- I TILFELLE IKKE TILGJENGELIGHET ER OK: -->
+              <!-- tilgjengelighet-->
+      <!-- 
+       <section id="hovedinnhold" tabindex="-1">  </section> -->
+         <!-- Denne vil gjøre at de som kun bruker tastatur kan komme til hovedsiden -->
+         <!-- 
+         <p id="main" tabindex="-1"></p>  -->

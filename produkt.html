@@ -41,6 +41,9 @@
 <body>
        <!-- Skip til hovedmeny som dukker opp ved trykk på TAB-knapp-->
        <a href="index.html" class="skip-to-main-content-link">Snarvei til hovedinnholdet</a>
+       <!-- Denne vil gjøre at de som kun bruker tastatur kan komme til hovedsiden flere ganger istedenfor
+      at den kommer opp èn gang per sidenedlastning -->
+       <p id="main" tabindex="-1"></p>
 
   <!-- Grid container -->
   <div id="grid-container">
@@ -53,37 +56,28 @@
         <input type="search" placeholder="Søk her..." title="Search">
         <button type="submit" title="Search..">Søk..<i class="fa-solid fa-magnifying-glass"></i> </button>
       </form>
+      <!-- Navgasjonsmeny-->
       <nav>
         <ul class="navbar">
-          <li><a href="index.html">HJEM</a></li>
-              <li><a href="converse-produkt.html">PRODUKT</a> </li>
-              <li><a href="om-oss.html">OM OSS</a> </li>
-              <li><a href="#">CONVERSE</a> </li>
-              <li><a href="#">NYHETER</a> </li>
-              <!-- Valgt å ikke fjerne selv om den er utgått siden SEO og UU analyser er tatt -->
-              <li><a href="produkt.html">UTGÅTT</a> </li>
-          </ul>
-  <!-- Denne vil gjøre at de som kun bruker tastatur kan komme til hovedsiden -->
-        <p id="main" tabindex="-1"></p>
-   
-
+          <li><a href="index.html">HJEM</a> </li>
+          <li><a href="converse-produkt.html">PRODUKT</a> </li>
+          <li><a href="om-oss.html">OM OSS</a> </li>
+          <li><a href="produkt.html">CONVERSE</a> </li>
+          <li><a href="#">TILBUD</a></li>
+          <li><a href="analyse.html">ANALYSE</a> </li>
+       </ul>
       </nav>
-
-        
-     
     </header>
 
-    <!-- Sidedel/Aside-->
-    <aside>
+    <!-- Sidedel/Aside ARIA-->
+    <aside role="complementary">
       <section>
-        <!-- Er obs på at det ikke foreligger noen heading her-->
            <ul>
             <li><a href="produkt.html">PRODUKT</a> </li>
             <li><a href="#">CONVERSE</a> </li>
             <li><a href="#">NYHETER</a> </li>
             <li><a href="#">TILBUD</a></li>
             <li><a href="om-oss.html">OM OSS</a> </li>
-            <!-- Bevisst valg å ikke ta med hjem/index.html på aside -->
           </ul>
           </section>
     </aside>
