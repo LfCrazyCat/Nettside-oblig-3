@@ -1,35 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <!-- Litt usikker på oppsettet, men valgte å plassere alfabetisk etter meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-  <link href="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg" type="stylesheet" alt="snapchat-ikon"> </a> <!-- Link til snapchat ikon-->
-  <link href="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg" type="stylesheet" alt="facebook-ikon"> </a> <!-- Link til facebook ikon -->
-  <link href="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg" type="stylesheet" alt="instagram-ikon"> </a> <!-- Link til instagram ikon -->
+
+  <!-- Keywords-->
+  <meta name="keywords" content="Sko, Shoes, Converse, about webshop, shop2youdrop, converse offer, shoe offer, great shoe offer,
+  buisness history, webshop shoes">
+
+  <!-- beskrivelse i meta-->
+  <meta 
+    name="description" 
+    content="Oblig 4 i webutvikling, Louise Fosdahl om nettside som selger sko.">
+
+
+  <!-- Linker til ikonene fra fontawesome -->
+  <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg"> <!-- Link til snapchat ikon-->
+  <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg"> <!-- Link til facebook ikon -->
+  <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg"> <!-- Link til instagram ikon -->
+   <!-- Linker til css stilark -->
+   <link rel="stylesheet" href="css/style.css" type="text/css">
 
 
   <!-- Tittel på siden -->
   <title>Om Oss</title>
+    <!-- Bruker OpenGraph som blant annet Facebook/Meta bruker-->
+    <meta property="og:title" content="Om oss">
+    <meta property="og:description" content="Oblig 4 med filen om oss">
+    <meta property="og:image" content="#">
+    <meta property="og:site_name" content="Om oss">
+    <meta property="og:url" content="https://itstud.hiof.no/~louisef/Nettside-oblig-3/om-oss.html">
+    <meta name="twitter:card" content="#">
+    <meta name="twitter:title" content="Om oss">
+    <meta name="twitter:description" content="Om oss filen for oblig 4">
+    <meta name="twitter:image" content="#">
+    <meta name="twitter:site" content="@oblig4nettbutikk">
+
+ <!-- Litt eldre måte -->
+    <meta property="fb:app_id" content="id_for_facebook_side" />
+    <meta property="instagram:site" content="@oblig4-eksempel">  
 </head>
 <body>
+     <!-- Skip til hovedmeny som dukker opp ved trykk på TAB-knapp-->
+     <a href="index.html" class="skip-to-main-content-link">Snarvei til hovedinnholdet</a>
   <!-- grid container-->
   <div id="grid-container">
     <header>
-      <!-- Nav meny -->
+
+          <section id="hovedinnhold" tabindex="-1">  </section>
+
+         <!-- Søkebar-->    
+          <form> 
+        <input type="search" placeholder="Søk her..." title="Search">
+        <button type="submit" title="Search..">Søk..<i class="fa-solid fa-magnifying-glass"></i> </button>
+      </form>
       <nav>
-        <a href="index.html" id="logo">LOGO</a>
-    
-        <!-- Navigasjonsbar-->
         <ul class="navbar">
           <li><a href="index.html">HJEM</a></li>
-          <li><a href="produkt.html">PRODUKT</a> </li>
+          <li><a href="converse-produkt.html">PRODUKT</a> </li>
           <li><a href="om-oss.html">OM OSS</a> </li>
           <li><a href="#">CONVERSE</a> </li>
           <li><a href="#">NYHETER</a> </li>
-        </ul>
+              <!-- Valgt å ikke fjerne selv om den er utgått siden SEO og UU analyser er tatt -->
+          <li><a href="produkt.html">UTGÅTT</a> </li>
+          </ul>
+
+  <!-- Denne vil gjøre at de som kun bruker tastatur kan komme til hovedsiden -->
+        <p id="main" tabindex="-1"></p>
+   
+
       </nav>
 
+        
+     
     </header>
 
     <!-- Aside/sidedel -->
@@ -43,7 +87,7 @@
             <li><a href="#">NYHETER</a> </li>
             <li><a href="#">TILBUD</a></li>
             <li><a href="om-oss.html">OM OSS</a> </li>
-            <!-- Bevisst valg å ikke ta med hjem/index.html på aside -->
+           
           </ul>
           </section>
     </aside>
@@ -62,10 +106,15 @@
   
             <!-- Overskrift for seksjon Historie i seksjon sec-0-->
             <h2>Historie</h2>
-            <img src="img/img/statue_fra_C1_superstar.jpg" alt="bilde fra C1 superstar">
+            <img src="img/om_oss/statue_fra_C1_superstar.webp" alt="Bilde av kulturisk og historisk sted, bilde fra C1 superstar"> 
             <p>
-              En lugar de escribir un texto aquí, puedo incluir cualquier cosa, así nunca hubiera pensado que el desarrollo web desencadenaría una depresión severa que no he tenido en muchos años. 
-              Estoy tan cansado. Recuerde eliminar este texto.</p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. <br>
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora 
+              incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+              <br>
+              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+               Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?.</p>
           </section>
   
 
@@ -74,10 +123,16 @@
   
             <!-- Overskrift for daglig leder i seksjon sec-1-->
             <h2>Daglig leder</h2>
-            <img src="img/img/businesswoman.jpg" alt="Bilde fra Gerd Altmann">
+            <img src="img/om_oss/businesswoman.webp" alt="Bilde av foretningsdame. Bilde fra Gerd Altmann">
            <p>
-            Esto no será suficiente.
-             Y si no funciona ahora, no puedo soportar seguir estudiando en esta universidad. Eliminar comentario.
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, 
+            similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+            <br>
+             Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, o
+             mnis dolor repellendus. 
+            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. 
+            <br>
+            Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
            </p>
           </section>
 
@@ -86,11 +141,14 @@
 
             <!-- Overskrift i sec-2 som inneholder ledig stilling-->
             <h2>Ledige stillinger</h2>
-            <img src="img/people.jpg" alt="bilde fra Werner Heiber">
+            <img src="img/om_oss/people.webp" alt="Bilde av personer som har møte, bilde fra Werner Heiber"> <!-- width="auto" height="auto"> -->
             <p>Un texto que indica que se buscan nuevos empleados.</p>
           </section>
+
+          
+          </section>
         
-        </section>
+       
       </main>
 
        <!-- Footer -->
@@ -99,15 +157,15 @@
             <!-- Måtte gjøre på denne måten slik at de sosiale medier icons blir synlig-->
             <div class="social">
               <a href="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg">
-                <img src="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg" alt="ikon for instagram">
+                <img src="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg" alt="ikon for instagram"> <!-- width="auto" height="auto" -->
                 <i class="icon ion-social-instagram"></i>
               </a>
               <a href="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg">
-                <img src="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg" alt="ikon for snapchat">
+                <img src="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg" alt="ikon for snapchat"> <!-- width="auto" height="auto"> -->
                 <i class="icon ion-social-snapchat"></i>
               </a>
               <a href="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg">
-                <img src="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg" alt="ikon for facebook">
+                <img src="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg" alt="ikon for facebook"> <!-- width="auto" height="auto"> -->
                 <i class="icon ion-social-facebook"></i>
               </a>
              </div>

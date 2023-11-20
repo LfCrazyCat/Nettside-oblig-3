@@ -3,6 +3,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+img{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-left: 0%;
+  margin-bottom: 5%;
+  padding: 0.5rem;
+}
+
+
+
 /* lager grid container som deles opp i header, aside, main og footer*/
 #grid-container {
   display: grid;
@@ -11,23 +22,23 @@ body {
 
 /* Padding i grid */
 header, aside, main, footer {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 /*Style for header */
 header {
-  font-size: 1.5rem;
+  font-size: 0.5rem;
   font-weight: 600;
   grid-area: header;
   background-color: navajowhite;
-  padding: 1%;
-  height: 70px;
+  padding: 2%;
+  height: fit-content;
+  margin-bottom: 10%;
 
 }
 /* style for nav header */
 header nav {
   display: flex;
-  justify-content: left;
   position: relative;
   max-width: 1900px;
 }
@@ -43,6 +54,8 @@ nav {
 /* Style for nav, gjemmer navigasjons i mindre skjermer */
 nav ul {
   display: block;
+  font-size: 0.5rem;
+  width: 100%;
 }
 
 nav ul:last-child {
@@ -52,51 +65,151 @@ nav ul:last-child {
 
 nav ul li {
   margin-bottom: 0;
-  width: 100%;
-  text-align: right;
+  width: 200%;
   padding: 0.5em;
 }
 
 /* Style for navigasjons linker- i desktop */ 
+/* Endret til underline for mer tydelig navigasjon for de som kjører med skjermleser */
 .navbar a {
   color: rgb(0, 0, 0);
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 48px;
   transition: .4s ease-in-out;
 }
 
-/* style for logo */
-#logo {
-  text-decoration: none;
+
+/* Skip til hovedmenyen, kommer opp vedtrykk på TAB knapp, kan trykke på enter for å komme til hovedsiden */ 
+.skip-to-main-content-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: #0b0101;
+  color: rgb(255, 255, 255);
+  opacity: 0;
+    font-size: 48px;
 }
+.skip-to-main-content-link:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+
+
+
 
 
 /* Gjemmer bort navigasjonslinker på smalere skjermer */
+/* Fjernet space-around siden align bestemmer */ 
 .navbar {
   display: none;
-  justify-content: space-around;
 }
 
-/* r e s p o n s i v e */ 
-.responsive {
+/* Tilgjengelighet */ 
+.snarvei {
+  .position: absolute;
+  left: -2000px;
+  top: 0px;
+}
+.snarvei:focus {
+  left: 0px;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+form {
+  background-color: #e0bed9;
+  width: 300px;
+  height: 44px;
+  border-radius: 5rem;
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  background-color: black; 
-  margin: 0;
-  padding: 0;
-  top: 40px;
+  flex-direction: row;
+  place-items: center;
+  text-align: justify;
+  
+  margin-bottom: 3%;
+}
+
+form button {
+  float: none; 
+  width: 200px;
+  height: 44px;
+  padding: 2px;
+  background: #1d2a35;
+  color: white;
+  font-size: 28px;
+  border: 0px solid grey;
+  border-left: none; 
+  cursor: pointer;
+  
+}
+
+form button:hover {
+  background: #20c950;
+}
+
+/* Style for seksjon for størrelse og handlekurv */
+.flex-section form {
+  background-color: #928484;
+  width: 200px;
+  height: 80px;
+  border-radius: 1rem;
+  display: flex;
+  place-items: center;
+  text-align: center;
+  
+  margin-bottom: 5%;
+  
+}
+
+.flex-section form button {
+  width: 250px;
+  height: 82px;
+  background: #1d2a35;
+  font-weight: 700;
+  color: white;
+  font-size: 15px;
+  border: 5px solid black;
+  cursor: pointer;
+  border-radius: 1rem;
+  
+}
+
+
+
+
+
+
+
+input {
+  all: unset;
+  font: 30px system-ui;
+  color: #000000;
+  height: 100%;
   width: 100%;
-  list-style: none;
+  padding: 0rem 1rem;
 }
-/* r e s p o n s i v e */ 
-.responsive a {
-  color: pink;
-  display: inline-block;
-  padding: 1rem;
-  text-decoration: none;
+::placeholder {
+  color: #000000;
+  opacity: 0.8;
 }
+
+button {
+  background-color: #bdade4;
+  font-size: 15px;
+  font-weight: 700;
+  height: 40px;
+  width: 120px;
+  border-radius: 5rem;
+}
+
 
 /* Style for aside/sidebar */
 aside {
@@ -113,36 +226,33 @@ aside a {
   padding: 5px 5px 5px 5px;
   width: 100%;
   justify-content: center; 
-  font-size: 20px;
+  font-size: 50px;
   color: black;
   text-decoration: underline; 
   transition: 0.3s;
 }
+
 /* Style for liste i sidebar */ 
+/* 0 px for mer tilgjengelighet men ikke synlig */
 aside li {
-  text-decoration: none;
-}
+  font-size: 0px;
+ }
 
 /* Style for aside seksjonen */
 aside section {
-  padding: 25%;
+  padding: 5rem;
   font-size: 0px;
-  text-decoration: none;
   color: rgb(4, 4, 4);
   background-color: navajowhite;
 }
 
-/* Style for headline i størrelse 4 og skjuler*/ 
-aside h4 {
-  display: none;
 
-}
 
 aside ul {
   display: block;
-  padding-top: 2px;
-  padding-bottom: 1px;
-  font-size: 0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-size: 5rem;
 }
 
 /* Style for hovedinnhold og legger i grid-area main */
@@ -152,7 +262,8 @@ main {
 
 /* Style for bilder hoved seksjon */
 main section img {
-  width: 100%; 
+  width: auto; 
+  height:auto;
 }
 
 /* Style for flex seksjonen */
@@ -160,144 +271,292 @@ main section img {
 .flex-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  text-align: center;
-  place-content: center;
+  place-items: center;
+  gap: 20px;
+  padding: 5%;
 }
 
+.flex-section h1 {
+  font-size: 50px;
+}
+
+
+.flex-section h2 {
+  font-size: 48px;
+}
+
+.flex-section h3 {
+  font-size: 40px;
+  font-family: italic;
+}
+
+
+.flex-section h4 {
+  font-size: 35px;
+} 
+
+.flex-section h5 {
+  font-size: 25px;
+}
+
+.flex-section p {
+  font-size: 20px;
+  font-family: italic;
+
+} 
+
+/* Lagt til auto for delen Performance som vil justere seg automatisk til nettleseren */
+/* FOR Å IKKE ENDRE FOR MYE ETTER OBLIG 3 SÅ FÅR BILDENE STÅ SOM DE ER */
+.flex-section img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
 /* Style for seksjon sec-0 */
+/* FJERNER ALLE DISPLAY: FLEX PÅ HVER ID SEC */ 
 #sec-0 {
-  display: flex;
+  
   flex-direction: row;
   flex-wrap: wrap;
   background-color:navajowhite;
-  padding: 0rem; 
-  justify-content: space-evenly;
-  /* Legger til width og height for oblig 4 */
-  height: 100%;
-  width: 100%
+  padding: 1rem; 
+ 
 }
 
 /* Style for tekst i seksjonen sec-0 */ 
 #sec-0 a {
   width: 100%;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   color: black;
   text-decoration: none;
 }
 
-/* Style for image i seksjonen sec-0 */
-#sec-0 img {
-  place-content: center;
-}
+
 
 /* Style for seksjon sec-1 */
 #sec-1 {
-  display: flex;
+  
   flex-direction: row;
   flex-wrap: wrap;
   background-color:navajowhite;
-  padding: 0rem; 
-  justify-content: space-evenly;
-    /* OBLIG4: LEGGER TIL HEIGHT OG WIDTH */
-  height: 100%;
-  width: 100%;
+  padding: 1rem; 
+ 
 }
 
 /* Style for tekst i seksjonen sec-1 */ 
 #sec-1 a  {
   width: 100%;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   color: black;
-  text-decoration: none;
+  text-decoration: solid;
 }
 
-/* Style for image i seksjonen sec-1 */
-#sec-1 img {
-  place-content: center;
-}
+
 
 /* Style for seksjon sec-2 */
 #sec-2 {
-  display: flex;
+
   flex-direction: row;
   flex-wrap: wrap;
   background-color:navajowhite;
-  padding: 0rem; 
-  justify-content: space-evenly;
-    /* OBLIG4: LEGGER TIL HEIGHT OG WIDTH */
-  height: 100%;
-  width: 100%;
+  padding: 1rem; 
+  
 }
 
 /* Style for tekst i seksjonen sec-2 */ 
 #sec-2 a {
   width: 100%;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   color: black;
-  text-decoration: none;
+  text-decoration: solid;
+
 }
 
-/* Style for image i seksjonen sec-2 */
-#sec-2 img {
-  place-content: center;
-}
+
+
 
 /* Style for seksjon sec-3 */
 #sec-3 {
-  display: flex;
+
   flex-direction: row;
   flex-wrap: wrap;
   background-color:navajowhite;
-  padding: 0rem; 
-  justify-content: space-evenly;
-    /* OBLIG4: LEGGER TIL HEIGHT OG WIDTH */
-  height: 100%;
-  width: 100%;
+  padding: 1rem; 
+ 
 }
 
 /* Style for tekst i seksjonen sec-3 */ 
 #sec-3 a {
   width: 100%;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   color: black;
-  text-decoration: none;
+  text-decoration: solid;
 }
 
-/* Style for image i seksjonen sec-3 */
-#sec-3 img {
-  place-content: center;
-}
+
 
 /* Style for seksjon sec-4 */
+
 #sec-4 {
-  display: flex;
+ 
   flex-direction: row;
   flex-wrap: wrap;
   background-color:navajowhite;
-  padding: 0rem; 
-  justify-content: space-evenly;
-    /* OBLIG4: LEGGER TIL HEIGHT OG WIDTH */
-  height: 100%;
-  width: 100%;
-}
+  padding: 1rem; 
+  
+  
+} 
 
 /* Style for tekst i seksjonen sec-4 */ 
 #sec-4 a {
   width: 100%;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   color: black;
-  text-decoration: none;
+  text-decoration: solid;
 }
 
-/* Style for image i seksjonen sec-4 */
-#sec-4 img {
-  place-content: center;
+#breadcrumbs{
+  width: 100%;
+}
+
+#breadcrumbs ul{
+  display: flex;
+  list-style: none;
+  gap: 0.9rem;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.flex-items{
+  width: 100%;
+}
+
+
+
+/* SEC-SEO ER LAGT TIL FOR OBLIG 4 */ 
+
+#sec-seo {
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  gap: 40px;
+  padding: 20%;
+  background-color: navajowhite;
+  position: relative;
+
+}
+
+#sec-seo img {
+  width: 100%;
+  height: auto;
+
+}
+
+#sec-seo h1 {
+  font-size: 50px;
+}
+
+#sec-seo h2 {
+  font-size: 45px;
+}
+
+#sec-seo h3 {
+  font-size: 40px;
+}
+
+#sec-seo p {
+  font-size: 20px;
+}
+
+#sec-uu {
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  gap: 40px;
+  padding: 20%;
+  background-color: navajowhite;
+  position: relative;
+
+}
+
+#sec-uu img {
+  width: 100%;
+  height: auto;
+}
+
+#sec-uu h1 {
+  font-size: 50px;
+}
+
+#sec-uu h2 {
+  font-size: 45px;
+}
+
+#sec-uu h3 {
+  font-size: 40px;
+}
+
+#sec-uu p {
+  font-size: 20px;
+}
+
+#col-chat-gpt {
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  gap: 40px;
+  padding: 20%;
+  background-color: navajowhite;
+  position: relative;
+}
+
+#col-chat-gpt img {
+  width: 100%;
+  height: auto;
+}
+
+
+#col-chat-gpt h3 {
+  font-size: 45px;
+}
+
+
+#col-chat-gpt p {
+  font-size: 20px;
+}
+
+#changes-0 {
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  gap: 40px;
+  padding: 20%;
+  background-color: navajowhite;
+  position: relative;
+}
+
+#changes-0 img {
+  width: 100%;
+  height: auto;
+}
+
+#changes-0 h2 {
+  font-size: 45px;
+}
+
+#changes-0 h3 {
+  font-size: 40px;
+}
+
+#changes-0 p {
+  font-size: 20px;
 }
 
 /* Style for footer */ 
@@ -320,8 +579,8 @@ footer ul {
 /* Style på linker som farge, understrek i footer linker */
 /* OBLIG 4: Fjerner underline og bruker solid istedenfor, fjerner Opacity som var på 0.8 før for mer tydelighet */
 footer ul a {
-  color: rgb(0, 0, 0); 
-  text-decoration: underline;
+  color: black; 
+  text-decoration: solid;
   
 }
 
@@ -347,13 +606,10 @@ footer .social > a {
 
 /* style for sosiale medier, justering */
 footer img {
-  height: 100%;
+  height: auto;
+  width: auto;
 }
 
-footer .social > a:hover {
-  opacity: 0.9;
-  color: brown;
-}
 
 /* Style for copyright tekst */ 
 footer .copyright {
@@ -377,9 +633,10 @@ footer .copyright {
     margin: 0;
   }
   
+  
   #ham, .fa-magnifying-glass {
     display: none;
-  }
+  } 
   
   .flex-section {
     display: flex;
@@ -387,19 +644,58 @@ footer .copyright {
     justify-content: space-between;
   }
   
+  /* For å justeres automatisk etter hvilken nettleser */ 
   .flex-section img {
-    width: 100%;
+    width: auto;
+    height:auto; 
   }
-  
+
+  /* For å justeres automatisk etter hvilken nettleser */
   .flex-section section {
     padding: 1rem;
-    width: 60%;
-   /* align-self: center; /* Cut */ 
+    width: auto;
+    height:auto;
   }
   
   
 
 }
+
+/*  /* FJERNES, KAN BRUKE3S OM ØNSKELIG
+.screenreader {
+  position: absolute !important;
+  height: 1px; 
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px 1px 1px 1px);
+ 
+} */
+
+/* r e s p o n s i v e */ 
+/* FJERNES, KAN BRUKE3S OM ØNSKELIG
+UBRUKT CSS 
+.responsive {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: black; 
+  margin: 0;
+  padding: 0;
+  top: 40px;
+  width: 100%;
+  list-style: none;
+}
+* r e s p o n s i v e  *
+.responsive a {
+  color: pink;
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+}
+*/
+
+
 
 
 

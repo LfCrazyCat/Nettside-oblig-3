@@ -1,53 +1,75 @@
-
-
-<!-- Analyse og forbedringer som skal dokumenteres med skjermbilder av resultater, og tiltak og tekstlige forklaringer på hva som var problem og hvordan det ble løst-->
-
-<!-- Strukturer med bruk av fornuftige lister (ul, ol), overskrifter (h1 - h6) og seksjoner med section -->
-
-<!-- LAGER KOPI AV DENNE MAPPEN FOR AT DET IKKE SKAL MISSFORSTÅS AT JEG HAR ENDRET PÅ KODEN ETTER OBLIG 3 ER LEVERT -->
-
-
-
- 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <!-- Litt usikker på oppsettet, men valgte å plassere alfabetisk etter meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <meta 
+    name="description" 
+    content="Oblig 4 i webutvikling, Louise Fosdahl om nettside som selger sko.">
+ <!-- Linker til ikonene fra fontawesome -->
   <link href="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg" rel="stylesheet">  <!-- Link til snapchat ikon-->
   <link href="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg" rel="stylesheet"> <!-- Link til facebook ikon -->
   <link href="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg" rel="stylesheet"> <!-- Link til instagram ikon -->
-
+  
+  <!-- Linker til css stilark -->
+  <link rel="stylesheet" href="css/style.css" type="text/css">
 
   <!-- Tittel på siden-->
-  <title>Hjem</title>
+  <title>Analyse</title>
+
+  <!-- Bruker OpenGraph som blant annet Facebook/Meta bruker-->
+  <meta property="og:title" content="Hjem">
+  <meta property="og:description" content="Forsiden til oblig 4 med linker videre.">
+  <meta property="og:image" content="#">
+  <meta property="og:site_name" content="Hjem">
+  <meta property="og:url" content="https://itstud.hiof.no/~louisef/Nettside-oblig-3">
+  <meta name="twitter:card" content="#">
+  <meta name="twitter:title" content="Hjem">
+  <meta name="twitter:description" content="Forsiden til oblig 4 med linker videre.">
+  <meta name="twitter:image" content="#">
+  <meta name="twitter:site" content="@oblig4nettbutikk">
+
+  <!-- meta tagger -->
+  <meta name="keywords" content="Analyse, oblig, arbeidskrav, nettbutikk, SEO, Meta, QandA, skjermleser, tilgjengelighet, rike resultater,
+  keywords, søkeord, aria, attributter">
+
 </head>
 <body>
+       <!-- Skip til hovedmeny som dukker opp ved trykk på TAB-knapp-->
+       <a href="index.html" class="skip-to-main-content-link">Snarvei til hovedinnholdet</a>
   <!-- Grid container -->
   <div id="grid-container">
     <header>
+  
+          <section id="hovedinnhold" tabindex="-1">  </section>
+
+          <!-- Søkebar-->
+          <form> 
+        <input type="search" placeholder="Søk her..." title="Search">
+        <button type="submit" title="Search..">Søk..<i class="fa-solid fa-magnifying-glass"></i> </button>
+      </form>
       <nav>
-        <a href="index.html" id="logo">LOGO</a>
-       
-       <!-- <div>
-          <i class="fa-solid fa-magnifying-glass"></i>
- 
-          <i id="ham" class="fa-solid fa-bars"></i> -->
-      
-      
-
-
+        
         <ul class="navbar">
-          <li><a href="index.html">HJEM</a></li>
-          <li><a href="produkt.html">PRODUKT</a> </li>
-          <li><a href="om-oss.html">OM OSS</a> </li>
-          <li><a href="#">CONVERSE</a> </li>
-          <li><a href="#">NYHETER</a> </li>
+        <li><a href="index.html">HJEM</a></li>
+            <!-- <a href="index.html" class="skip">Skip to content</a> -->
+            <li><a href="converse-produkt.html">PRODUKT</a> </li>
+            <li><a href="om-oss.html">OM OSS</a> </li>
+            <li><a href="#">CONVERSE</a> </li>
+            <li><a href="#">NYHETER</a> </li>
+            <!-- Valgt å ikke fjerne selv om den er utgått siden SEO og UU analyser er tatt -->
+            <li><a href="produkt.html">UTGÅTT</a> </li>
         </ul>
+  <!-- Denne vil gjøre at de som kun bruker tastatur kan komme til hovedsiden -->
+        <p id="main" tabindex="-1"></p>
+        <!-- Kan brukes for skip flere linker-->
+        <!-- 
+        <ol>
+          <li><a href="index.html">HOVEDSIDEN</a> </li>
+        
+        </ol>
+        -->
 
 
 
@@ -57,7 +79,7 @@
      
     </header>
     <!-- Sideseksjon, aside-->
-    <aside>
+    <aside role="complementary">
       <section>
             
             <ul>
@@ -79,40 +101,124 @@
     <!-- Hovedinnhold -->
     <main>
        <section class="flex-section">
-        <h1>Velkomsttekst</h1>
+        <h1>Oblig 4</h1>
+
+
+        <!--Legger til en hidden/screen-reader-only -->
+        <div aria-label="test A">
+          <p aria-hidden="true">test B</p>
+        </div>
       
       
  <!-- Kaller disse for sec-0, som gjør at de ulike kateogoriene vil kunne brukes på samme måte i css -->
         <section id="sec-0">
-          <img src="#" alt="BILDETEKSt">
-          <a href="#">BILDETEKST</a>
+        
           <H2>DEL 2 ANALAYSE</H2>
           <br>
-          <br>
-          <br>
+         
+         
 
           <h3>Nøkkelord</h3>
+          <!-- Valgt å bruke <strong> i hvert første ord, for å vise at det er nytt avsnitt. Det kan fort bli uoversiktlig om det er for mye tekst, og kan være vanskelig å vite hvor langt man har lest om brukeren faller ut av tekst-lesing-->
           <p>
-            Nøkkelord er en frase eller ord som det søkes i en søkemotor. Det her en nettside må velge ut sine nøkkelord, for å kunne bli mer synlig. 
+            <strong>Nøkkelord</strong> er en frase eller ord som det søkes i en søkemotor. Det her en nettside må velge ut sine nøkkelord, for å kunne bli mer synlig. 
             Denne nettbutikken selger sko så da er det nødvendig med noe ord som omhandler dette. Det må ha en relevans. 
-            Vi kan bruke "tilbud sko", "høstnyheter sko", "sko nettbutikk". 
             <br>
-            1. nøkkelord: Tilbud sko. Dette for at mange ønsker å få et rabatt og finne tilbud på sko. 
             <br>
-            2. nøkkelord: "høstnyheter", mange er ute etter å få se nyheter for sesongen og kjøpe. 
             <br>
-            3. nøkkelord: "nettbutikk sko", som jeg vurderer at folk flest søker etter når de skal kjøpe sko. 
+            <strong>Vil</strong> man ha mer trafikk, må man ha mer nøkkelord men for å få flere nøkkelord må man ha mer innhold. Når man har mer innhold, må man promotere innholdet.
+            Dette er kun en nettbutikk, uten en fysisk butikk derfor utelukkes det topografi og geografiske grunner men ønsker ikke å sende ut av Norge (det vil også utelukke Longerybyen, det er dyrt for bedrifter å sende dit) så vil markedsføre innenlands. 
+            <br>
+            <br>
+            <br>
+            <strong>Faktorer</strong> som spiller inn utenfor siden er linker (kvalitet, innhold og antall), sosialt (rykter, kundetilfredstillhet og antall delinger på sosiale medier), tillit (historie, identitet, interaksjoner og autoritet) og lokalitet (sted og tilknytting)
+            mens det som spiller inn på den faktiske 
+            siden er innholdet (kvalitetsmessig, ordbruk, lokalitet mm), HTML (titler, informasjon, struktur, header og at det foreligger et godt innhold) 
+            og arkitektur (ingen duplikat, mobile first, sikkerhet, speed, lenker og program som brukes for søkemotorer som samler data fra nettet som crawlere). 
+            <br>
+            <br>
+            <br>
+            <br>
+            <strong>Siden</strong> SEO er organisk traff ergo ikke betalt søketreff kreves det en del arbeid, i motsetning om man bruker SEM (search engine marketing) i søkemotorene, som er betalte annonser som vil gi et rasker resultat men som ulemper at koster en god del og effekten etter en kampanje er lav. 
+            Men med hardt arbeid med SEO, vil det kunne føre til flere besøkende, mer og en lenger effekt enn andre muligheter så vil det lønne seg (så lenge dette prioriteres og jobbes aktivt med- siden det ikke har en umiddelbar effekt). 
+            Brukere søker etter hva de ønsker å oppnå med søket, gjerne en vare eller et produkt/kategori og ikke direkte søk opp mot en bedrift.
+            Algoritmene endrer seg fra dag til dag og er derfor ikke statisk, her spiller nytt innhold og konkurransedyktige konkurrenter inn, med mer.  
+            <br>
+            <br>
+            <br>
+            <br>
+            <strong>Innholdet</strong> må samsvare med det som søkes ellers kan man oppleve en fluktfrekvens som vil si at kunden klikker seg inn på nettsiden uten å gjennomføre en handling eller videre navigering på siden før de forlater siden. 
+            Bounce rate regnes ut av Google Analytics som tar økter der det bare registreres åpning og lukking av en enkeltside og deretter deler disse på antall totalt økter. Er det høy fluktfrekvens vil det ikke være godt tegn for markedsføringen når det gjelder nettbutikker, 
+            her er målet å få en bestemt handling (varekjøp) til å gjennomføres. Hadde det vært en blogg, ville det ikke spilt en særlig stor rolle (f.eks. en bruker søker etter en konkret matoppskrift og går inn på en matblogg = inn og ut når oppskriften er funnet  uten videre navigering på bloggen).
+            <br>
+            <br>
+            <br>
+            <br>
+            <strong>For</strong> å redusere fluktfrekvensen bør hver side ha et innhold som svarer til brukerens søkeintensjon, og punkter som kan forbedre fluktfrekvensen er en rask nettside, call-to-action i teksten, mobile first, god struktur, 
+            uten lenker som er døde, god og tydelig navigering for menyen og et estetisk og funksjonell design. 
+            Men det viktigste er at landingssiden sitt innhold er relevant for søkeintensjonen, som vil si intensjonen til formålet eller intensjonen er bestemt når søkefelt (Google) brukes for å søke etter det som ønskes å få ut av en søkemotor. 
+            <br>
+            <br>
+            <br>
+            <br>
+            <strong>Søkemotorer</strong> er ganske harde, viktig å ikke bryte reglene eller jukse seg frem for da kan man risikere å bli shadowbannet eller bannlyst. Det er f.eks. ikke verdt å jukse seg opp til en topp-plassering i en søkemotor når det ikke finnes noen indikasjoner på at det er reelt for så å bli hevet langt bak. 
+            Noe kan ikke påvirke, som cookies og logghistorikk som søkemotorene har om deg- som igjen vil påvirke resultatene ved søk, da er det bedre å gå i inkognito-modus, privat-modus eller bruke skrive inn &pws=0 i URLen. 
+            <br>
+            <br>
+            <br>
+            <br>
+            <strong>Det</strong> kan være lurt å bruke nøkkelord som ikke alle andre bruker med lav konkurranse. 
+            Dette er som nevnt en nettbutikk med kun sko, og et merke som selges er Converse- noe som bør brukes når det gjelder keywords.
+            <br>
+            <br>
+            <br> 
+            <br>
+            <ul>
+              <!-- Lager en  uordnet liste med forslag til nøkkelord. Bruker <strong> for å utheve nøkkelordene, mens forklaringen er i vanlig tekst form-->
+              <li><strong>Converse nyheter</strong></li>
+              <li><strong>Converse Blue Green</strong></li>
+              <li><strong>Converse Kidz</strong>, bytter ut S med Z. </li>
+              <li><strong>Støvletter</strong>, et navn ikke alle bruker- det vanligste er for det meste å bruke <i>bare</i> sko. </li>
+              <li><strong>Sjo</strong>, bytter ut K med J- ergo stavefeil med nærliggende bokstav. Her vil auto-correkt på mobil (iphone) endre tilbake til sko. </li>
+              <li><strong>Skp</strong>, bytter ut O med P- ergo stavefeil med nærliggende bokstav. Her vil auto-correkt på mobil (Iphone) endre tilbake til sko.</li>
+              <li><strong>Dko</strong>, bytter ut S med D- ergo stavefeil med nærliggende bokstav. Her vil auto-correkt på mobil (iphone) endre tilbake til sko. </li>
+              <li><strong>Slo</strong>, butter ut K med L- ergo stavefeil med nærliggende bokstav. Her vil ikke auto-correkt på mobil (iphone=) endre tilbake til sko. </li>
+              <li><strong>Billig sko</strong>, mindre brukt i forhold til "sko salg".</li>
+              <li><strong>Tilbud sko</strong>, mindre brukt enn "sko salg".</li>
+              <li><strong>Vonde føtter</strong>, så lenge produktene som selges er forsket på eller er nøye vurdert ut ifra fot-problematikk kan dette brukes. Men kan ikke brukes (eller noen mener nok at det kan brukes på f.eks. Happy Floats men det er misvisende).</li>
+              <li><strong>Smerter i fot</strong>, av samme grunn som overfor.</li>
+              <li><strong>Hallux valgus</strong>, av samme grunn som overfor. Bruker en konkret diagnose som omhandler smerter. </li>
+
+            </ul>
+            
+            <br>
+           
+            <br>
+           
+            <br>
+            
+            <br>
+           
+            
+           
+
+
+            <br>
+            <p>
+            <strong>Det</strong> må brukes søkeord som faktisk brukes. Når søkeord skal vurderes, bør det undersøkes hvor høy «Keyword Difficulty» ligger, f.eks. bare «sko» har en KD på 54 i følge keyword-generator på <a href="https://ahrefs.com/">ahrefs</a>. 
+            <br>
+            I motsetning til gaming, så hadde en høy KD vært positivt men i SEO så er ikke det like populært å bruke, siden det handler om vanskelighetsgraden til å oppnå en topp 10 søkeresultater i en 100 poengs skala. 
+            Og i følge <a href="https://www.serpdrill.com/">Serpdrill</a>, har «sko» en vanskelighetsgrad på 76 med et månedlig volum på 33.1K. 
           </p>
+           <p> <strong>Vi</strong> kan legge inn nøkkelord på flere måter- inne i URL, HTML, metatittel, bilder (i ALT-tag) mm. 
+            I følge SeOpp.no under «Søkevolum» vil en 1.plass kunne forventes at 30% av søkevolum vil føre klikk til din side. 
+          </p>
+
+         
 
 
           <h3>SEO ANALYSE</h3>
-          <p>
-            Dette er en avgjørende del av digital markedsføring i dagens samfunn. Høy grad av viktighet, siden det er viktig å være synlig for besøkende og poteniselle kunder i en verden der det er høy konkurranse om å få kundene. 
-            Denne analysen hjelper til for å forstå og forbedre virksomhetens synlighet og ytelse når det kommer til søkemotorer. 
-            Den går ut på å evaluere og analysere nettsidens organiske synlighet og dens prestasjon i søkemotor som innebærer å undersøke de ulike faktorer som har en påvirkning for synligheten, og identisere områder på siden som 
-            kan endres for å forbedre økningen og tiltrekke mer organisk trafikk. Grundig SEO-analyse innebærer å se på tekniske og innholdsmessige aspekter  på et nettsted.
-
-          </p>
+       
 
           <h3>TEKNISK ANALYSE</h3>
           <p>Ser gjerne på den totale tekniske statusen til nettsiden. Fokuseres på identifisering og løse potensielle problemer og mangler som har en innvirkning på synligheten. 
@@ -143,148 +249,509 @@
 
        <section id="sec-seo">
         <h1>SEO analyse</h1>
-      
-        <img src="img/img/OBLIG 4 BILDER/alerts.png" alt="screenshot av details">
-        <h2>Index.html</h2>
         <p>
-          Ser at det er TO alerts på redudant link, som innebærer at tilstøtende lenker går til samme url. Dette kan resultere i ytterligere navigering og repitisjon for tastatur- og skjermleserbrukere. 
+          Dette er en avgjørende del av digital markedsføring i dagens samfunn. Høy grad av viktighet, siden det er viktig å være synlig for besøkende og poteniselle kunder i en verden der det er høy konkurranse om å få kundene. 
+          Denne analysen hjelper til for å forstå og forbedre virksomhetens synlighet og ytelse når det kommer til søkemotorer.  
           <br>
-          Det som kan gjøres for å unngå det er å kombinere de overflødige lenkene til èn lenke og fjerne eventuell overflødig tekst/alternativ tekst. F.eks. hvis et produktbilde og produktnavn er i en og samme lenke kan det 
-          vanligvis gi alt="". 
-          <br>
-          På denne siden er det da HJEM som linkes til index.html, i allerede index.html og OM OSS i navigasjonsmenyen som har samme url som i seksjon sec-2. 
+           <br>
+
+          Den går ut på å evaluere og analysere nettsidens organiske synlighet og dens prestasjon i søkemotor som innebærer å undersøke de ulike faktorer som har en påvirkning for synligheten, og identisere områder på siden som 
+          kan endres for å forbedre økningen og tiltrekke mer organisk trafikk. Grundig SEO-analyse innebærer å se på tekniske og innholdsmessige aspekter  på et nettsted.
+
         </p>
+        <h2>Index.html</h2>
+        <br>
+        <br>
+        <br>
+        <p> Dette er resultatet av den første lighthouse analysen.  </p>
+        <div role="img" aria-label="bilde-av-alle-typene-fra-lighouse-av-index-filen">
+          <img src="img/OBLIG-4/ALL_ANALYSE_INDEX_FIRST.png" alt="">
+        </div>
+       
+        <br>
+        <br>
+       
+         
+
+        <h3>SEO analyse</h3>
+         <div role="img" aria-label="bilde av screenshot med 90poeng for SEO">
+          <img src="img/OBLIG-4/index_seo_first_90.png" alt="">
+         </div>
+       
+        
+       
+       
+        
+        <p>Her mangler det meta description denne vil inkluderes i søkeresultater for å få et konsist oppsummert sideinnhold. 
+        <br>
+        Her er heller ikke trykkmålene i riktige størrelse, for mobil vennlighet-  interaktive elementer som knapper og lenker bør være store nok (48x48px) eller ha nok plass rundt dem, 
+        til å være lett nok til å touche uten at det overlapper andre elementer. 
+      </p>
+      <br>
+      <br>
+
+
+      <h3>Accessibility</h3>
+      
+      <div role="img" aria-label="bilde av accessibility med poeng på 92 i lighthouse">
+        <img src="img/OBLIG-4/ACCESSIBILITY_INDEX_FIRST.png" alt="">
+  </div>
+
+      
+      <br>      
+      <p>
+        Her kommer det frem at bakgrunn og forgrunn farger ikke har tilstrekkelig kontrastforhold. Tekst med lav kontrast er vanskelig eller umulig å lese for mange brukere. Dette gjelder for navigasjonsmenyen i footer
+        som har en lysegrønn farge.  </p>
+        <div role="img" aria-label="bilde av mobil vennlighet der det ikke er ikke riktig størrelse">
+          <img src="img/OBLIG-4/ACCESSBILITY_MOBIL.png" alt="">
+          </div>
+       
+
+
+     
+      <br>
+      
+
+
+      <h3>Best practise</h3>
+      <br>
+    
+      <div role="img" aria-label="bilde av 91 poeng i lighthouse av best practise ..">
+        <img src="img/OBLIG-4/BEST_PRACTISE_FIRST_91.png" alt="">
+      </div>
+     
+      
+      <p>
+        Her registreres det en avlastningslytter (unload listener). Unload-hendelsen utløses ikke pålitelig og å lytte etter den kan forhindre nettleseroptimaliseringer som back-forward cache. Her kan 
+        pagehide eller synlighetsendring-hendelser istedenfor. 
+        Denne kobles til et program som kjøres på min maskin; Kaspersky. 
+        <br>
+        Browser errors were logged to the console. Feil logget på konsollen indikerer uløste problemer som kan komme fra nettverksforespørselsfeil og andre nettleser-bekymringer. 
+        <br>
+        CSP og XSS, viktig at CSP er effektiv mot XSS-angrep. Det å ha en sterk innholdssikkerhetspolicy reduserer risiko for at en cross-site scripting angrep reduseres dramatisk. 
+        Her er ingen CSP funnet i håndhevingsmodus. High severity. 
+
+      </p>
+      <h3>Performance</h3>
+
+      <div role="img" aria-label="bilde av performance på 61 pluss bilde av forsiden">
+        <img src="img/OBLIG-4/PERFORMANCE_INDEX_FIRST_.png" alt="">
+       </div>
+     
+      <p>
+        Bildefilene er store og bruker derfor lenger tid når det gjelder nedlastningstid. Dette er forhold som er viktig, brukere/kunder vil vurdere det negativt om siden er treg og det kan resultere i 
+        å miste kunder til andre konkurrenter som har en raskere nedlastningstid. JPEG og PNG filer tar større plass. Beste er å lagre bilder i next-gen formater som Webp og AVIF for bedre komprimering og
+        vil gi raskere nedlasdtninger og mindre dataforbruk.   </p>
+        <br>
+
+        <p>Bilde elementer har ikke eksplisitt width og height (bredde og høyde). Dette kan redusere layoutforskyvninger og forbedre CLS.  </p>
+        <br>
+
+        <p>Side forhindret tilbake og forover buffergjennoppretting. Mange navigasjioner utføres ved å gå tilbake til forrige side eller forover igjen. TIlbake/frem- cachen (bfcache)
+        kan fremskynde disse returnnavigasjonene. 
+
+        Her spiller også program som kjøres på min personlige maskin inn som heter Kaspersky. I forhold til koden på nettsiden er det mindre å gjøre derfra som kan bedre dette, som går som "3rd-party resources"
+        som har en effekt i disse: enable text compression, url, reduce unused css. </p>
+      
+
+        <br>
         <br>
         
+        <h4>USE HTTP/2 </h4>
+      
+       <p>Siden kjøres i protokollen HTML/1. Men protokollen HTTP/2 har flere fordeler, denne er binary istendefor textual. I tilleegg er den fullstendig multiplekset istedenfor å blokkerende og ordnende tilkoblinger som i HTTP/1. 
+        Elimerer også behovet for domenedeling, kan derfor brukes for alle ressurser fra et gitt domene. 
+        Bruker header-komprimering for å redusere overhead, lar servere pushe svar proaktivt inn i klientbuffer (har blitt fjernet fra nettlesre siden det ikke har funket som designet).
+        HTTP/1 kan jeg ikke endre på, prøvde å undersøke om det var mulig å endre til HTTP/2.
+      </p>
+
+        <br>
+        <br>
         <p>
-
-        </p>
-
-        <h2>Produkt.html</h2>
-        <img src="img/img/OBLIG 4 BILDER/produkt.html_summary.png" alt="screenshot av details i produkt.html fil">
-        <br>
-        <p>Uten konmkrete detaljer </p>
-        <br>
-        <img src="img/img/OBLIG 4 BILDER/details_produkthtml.png" alt="screenshot av details full produkt html">
+        <h4>SERVE IMAGES IN NEXT-GEN FORMATS / VIS BILDER I NESTE GENERASJONS FORMATER</h4> 
         <p>
-          Her kommer det frem at to bilder har samme alternativ tekst som ligger nærme hverandre, tenker at det er pga. bilde er tatt av samme fotograf. 
-          <br>
-          Når to bilder har samme alternativ tekst kan dette ofte forårsake redudans eller indikere feil alternativ tekst. Her bør det fjernes undøvendig redudans ellers kan man bruke alt="" , altså tom tekst
-          hvis ikke det er en bildeknapp. 
-          <br>
-          Den andre alerten er at det foreligger en redudant link, samme som i index.html. 
-        </p>
-
-        <h2>Om-oss.html</h2>
-        <img src="img/img/OBLIG 4 BILDER/details_produkthtml.png" alt="screenshot av details i om oss fil">
-        <br>
-        <p> 
-          Her kommer samme alert som i de forrige filene, men denne har kun èn alert. Forklaringen er derfor samme som seksjonen index.html. 
-        </p>
-        <br>
-        <img src="img/img/OBLIG 4 BILDER/lighthouse_om_oss1.png" alt="lighthouse om oss 1">
-        <br>
-        <p> 
-          Det ble et problem som påvirker lighthouse, sidenedlastningstiden var for treg innen tiden gitt ut. Resultater kan være ufullførte. 
-          <br>
-          Metadata: mangler meta beskrivelser som burde være inkludert i søkeresultat for å konsist oppsummere sideinhold. 
-        </p>
-        <img src="img/img/OBLIG 4 BILDER/mobile_friendly_om_oss.png" alt="screenshot av movbilvennlighet i Om Oss">
-        <p>
-          Interaktive elementer som knapper og linker bør være store nok (48x48px) eller ha nok plass rundt dem, til å være enkle å trykke uten å overlappe andre elementer. 
-        </p>
-        <img src="img/img/OBLIG 4 BILDER/lighthouse_om_oss_all.png" alt="screenhshot av all items i om oss">
-        <p>
-          Generell problem til sidenedlastning. 
-          <br>
-        </p>
-        <img src="img/img/OBLIG 4 BILDER/suggestion_loading_om_oss.png" alt="anbefalinger til nedlastningstid">
-        <p>Det ble funnet en rekke muligheter for å få nedlastningstiden til å gå raskere.
-        <br>
-        PROPERTY SIZE IMAGES
-        Kan bruke bilder med passende størrelse for å lagre mobildata og forbedre lastetiden. Gjelder alle bildene. Kan redusere 420.7 KiB med dette. 
-
-        <br>
-        ENABLE TEXT COMPRESSION / AKTIVER TEKSTKOMPRIMERING 
-
-        <br>
-        SERVE IMAGES IN NEXT-GEN FORMATS / VIS BILDER I NESTE GENERASJONS FORMATER 
         Bildeformater som WebP og AVIF gir ofte bedre komprimering enn PNG og JPEG som er brukt i dette tilfelle, dette kan hjelpe med raskere nedlastninger og mindre dataforbruk. 
         Ressursstørrelse er 559.2KiB. Potensiell sparing vil være 276.6KiB for alle bilder som er brukt. 
+      </p>
 
 
         <br>
-        ELIMINATE RENDER-BLOCKING RESOURCES/ ELIMINER GJENGIVELSEBLOKKERENDE RESSURSER
+        <br>
+       
+        <h4>ELIMINATE RENDER-BLOCKING RESOURCES/ ELIMINER GJENGIVELSEBLOKKERENDE RESSURSER</h4>
+        <p>
         Ressurser blokkerer den første malingen på siden. Her kan det lønne seg å vurdere levere kritisk JS/CSS inline og utsette alle ikke-kritiske JS/stiler. 
         Overføringsstørrelse er 2.5KiB og potensielle sparing vil være 690meter i sekundet. 
         Kan være at Kaspersky programvare på min maskin påvirker denne. 
+      </p>
 
         <br>
-        REDUCE UNUSED CSS/REDUER UBRUKTE CSS 
+        <br>
+       
+        <h4>REDUCE UNUSED CSS/REDUER UBRUKTE CSS</h4>
+        <p>
         Reduser ubrukte regler fra stilark og utsett CSS som ikke brukes for innhold over skillelinjen for å redusere byte som forbrukes av nettverksaktivitet. 
         Overføringstørrelse er 247.7 KiB og potensiell sparing er på 247.7KiB. 
 
-        <br>
-        USE HTTP/2 
-        Siden kjøres i protokollen HTML/1. Men protokollen HTTP/2 har flere fordeler, denne er binary istendefor textual. I tilleegg er den fullstendig multiplekset istedenfor å blokkerende og ordnende tilkoblinger som i HTTP/1. 
-        Elimerer også behovet for domenedeling, kan derfor brukes for alle ressurser fra et gitt domene. 
-        Bruker header-komprimering for å redusere overhead, lar servere pushe svar proaktivt inn i klientbuffer (har blitt fjernet fra nettlesre siden det ikke har funket som designet). 
-
-        <br>
-        REDUCE UNUSED JAVASCRIPT/ REDUSER UBRUKTE JS 
-        Reduser ubrukt JavaScript og utsett lasting av skript til de kreves for å redusere byte som forbrukes av nettverksaktivitet. Dette er min pc. 
-
       </p>
 
-      <h2>DIAGNOSE/DIAGNOSTICS</h2>
+      <br>
+
+
+
+
+      <h2>Produkt.html</h2>
+      <br>
+      <div role="img" aria-label="bilde av av alle typer i lgihthouse for produkt">
+        <img src="img/OBLIG-4/PRODUCT_SEO_FIRST.png" alt="">
+       </div>
+     
+      
+
+      <h3>SEO</h3>
+      <div role="img" aria-label="bilde av SEO på 90 i produktfil">
+        <img src="img/OBLIG-4/SEO_PRODUCT_FIRST.png" alt="">
+        </div>
+      
+      <p>
+        Her mangler det meta description denne vil inkluderes i søkeresultater for å få et konsist oppsummert sideinnhold. 
+       
+        Her er heller ikke trykkmålene i riktige størrelse, for mobil vennlighet-  interaktive elementer som knapper og lenker bør være store nok (48x48px) eller ha nok plass rundt dem, 
+        til å være lett nok til å touche uten at det overlapper andre elementer. 
+      </p>
+      <br>
+      <br>
+
+
+
+      <h3>Accesibility</h3>
+      <br>
+      <br>
+      <div role="img" aria-label="bilde av screenshot fra accessibility for produkt fil">
+        <img src="img/OBLIG-4/ACCESSIBILITY_PRODUKT_FIRST.png" alt="">
+      </div>
+      
+      <p>
+        Her kommer det frem at bakgrunn og forgrunn farger ikke har tilstrekkelig kontrastforhold. Tekst med lav kontrast er vanskelig eller umulig å lese for mange brukere. Dette gjelder for navigasjonsmenyen i footer
+        som har en lysegrønn farge.
+
+      </p>
+      <br>
+      <br>
+
+      <h3>Best practise</h3>
+      <br>
+      <br>
+      <div role="img" aria-label="bilde av best practise for produkt fil">
+        <img src="img/OBLIG-4/BEST_PRACTISE_PRODUKT_FIRST.png" alt="">
+      </div>
+     
+      <p>
+        Her registreres det en avlastningslytter (unload listener). Unload-hendelsen utløses ikke pålitelig og å lytte etter den kan forhindre nettleseroptimaliseringer som back-forward cache. Her kan 
+        pagehide eller synlighetsendring-hendelser istedenfor. 
+        Denne kobles til et program som kjøres på min maskin; Kaspersky. 
+        <br>
+        <h4>Browser errors were logged to the console</h4>
+        <p> Feil logget på konsollen indikerer uløste problemer som kan komme fra nettverksforespørselsfeil og andre nettleser-bekymringer. 
+        <br>
+        <h4>CSP og XSS</h4>
+        <p>viktig at CSP er effektiv mot XSS-angrep. Det å ha en sterk innholdssikkerhetspolicy reduserer risiko for at en cross-site scripting angrep reduseres dramatisk. 
+        Her er ingen CSP funnet i håndhevingsmodus. High severity. </p>
+        
+
+      <br>
+      <br>
+
+      <h3>Performance</h3>
+
+      <div role="img" aria-label="bilde av screenshot av performance i produkt filen">
+        <img src="img/OBLIG-4/ImgOblig4/performance_produkt.png" alt="">
+        </div>
+      
+      <br>
+      <br>
+     
+        <h4>Bildefilene</h4> 
+        <p>er store og bruker derfor lenger tid når det gjelder nedlastningstid. Dette er forhold som er viktig, brukere/kunder vil vurdere det negativt om siden er treg og det kan resultere i 
+        å miste kunder til andre konkurrenter som har en raskere nedlastningstid. JPEG og PNG filer tar større plass. Beste er å lagre bilder i next-gen formater som Webp og AVIF for bedre komprimering og
+        vil gi raskere nedlasdtninger og mindre dataforbruk.   </p>
+        <br>
+        <p>
+        Bilde elementer har ikke eksplisitt width og height (bredde og høyde). Dette kan redusere layoutforskyvninger og forbedre CLS.  </p>
+        <br>
+        <p>
+        Side forhindret tilbake og forover buffergjennoppretting. Mange navigasjioner utføres ved å gå tilbake til forrige side eller forover igjen. TIlbake/frem- cachen (bfcache)
+        kan fremskynde disse returnnavigasjonene.  </p>
+      
+
+       <p> Her spiller også program som kjøres på min personlige maskin inn som heter Kaspersky. I forhold til koden på nettsiden er det mindre å gjøre derfra som kan bedre dette, som går som "3rd-party resources"
+        som har en effekt i disse: enable text compression, url, reduce unused css. 
+      </p>
+      
+
+        <br>
+        <br>
+        <h4>USE HTTP/2 </h4>
+        <p>
+        Siden kjøres i protokollen HTML/1. Men protokollen HTTP/2 har flere fordeler, denne er binary istendefor textual. I tilleegg er den fullstendig multiplekset istedenfor å blokkerende og ordnende tilkoblinger som i HTTP/1. 
+        Elimerer også behovet for domenedeling, kan derfor brukes for alle ressurser fra et gitt domene. 
+        Bruker header-komprimering for å redusere overhead, lar servere pushe svar proaktivt inn i klientbuffer (har blitt fjernet fra nettlesre siden det ikke har funket som designet).
+        HTTP/1 kan jeg ikke endre på, prøvde å undersøke om det var mulig å endre til HTTP/2.
+      </p>
+
+        <br>
+        <br>
+        <h4>SERVE IMAGES IN NEXT-GEN FORMATS / VIS BILDER I NESTE GENERASJONS FORMATER</h4> 
+        <p>
+        Bildeformater som WebP og AVIF gir ofte bedre komprimering enn PNG og JPEG som er brukt i dette tilfelle, dette kan hjelpe med raskere nedlastninger og mindre dataforbruk. 
+        Ressursstørrelse er 559.2KiB. Potensiell sparing vil være 276.6KiB for alle bilder som er brukt. 
+      </p>
+
+
+        <br>
+        <br>
+        
+        <h4>ELIMINATE RENDER-BLOCKING RESOURCES/ ELIMINER GJENGIVELSEBLOKKERENDE RESSURSER</h4>
+        <p>
+        Ressurser blokkerer den første malingen på siden. Her kan det lønne seg å vurdere levere kritisk JS/CSS inline og utsette alle ikke-kritiske JS/stiler. 
+        Overføringsstørrelse er 2.5KiB og potensielle sparing vil være 690meter i sekundet. 
+        Kan være at Kaspersky programvare på min maskin påvirker denne. 
+      </p>
+
+        <br>
+        <br>
+        <h4>REDUCE UNUSED CSS/REDUER UBRUKTE CSS</h4> 
+        <p>
+        Reduser ubrukte regler fra stilark og utsett CSS som ikke brukes for innhold over skillelinjen for å redusere byte som forbrukes av nettverksaktivitet. 
+        Overføringstørrelse er 247.7 KiB og potensiell sparing er på 247.7KiB. 
+      </p>
+      <br>
+      <br>
+
+     
+
+
+
+
+      <h2>Om-oss.html</h2>
+      <div role="img" aria-label="Bilde av poeng fra Lighthouse av om oss filen">
+        <img src="img/OBLIG-4/lighthouse_om_oss_all.png" alt="">
+        </div>
+      
+      <br>
+     
+
+
+      <h3>SEO</h3>
+      <div role="img" aria-label="Screenshot av SEO av om oss filen i lighthouse">
+        <img src="img/OBLIG-4/SEO_OM_OSS_FIRST.png" alt="">
+       </div>
+     
+      <p>
+        Her kommer det også frem at documentet ikke har en meta beskrivelse. Det er viktig å formatere HTML-en på den måten som gjør det mulig for crawlers å forstå innholdet bedre. 
+      </p>
+     
+      <br>
+
+      <h3>Accesibility</h3>
+      <div role="img" aria-label="Bilde av poengsum på 92 fra Lighthouse av accessibility">
+        <img src="img/OBLIG-4/accessibility_om_oss.png" alt="">
+        </div>
+      
+     <p>
+      Her kommer det frem at bakgrunn og forgrunn farger ikke har <strong>tilstrekkelig kontrastforhold</strong>. Tekst med lav kontrast er vanskelig eller umulig å lese for mange brukere. Dette gjelder for navigasjonsmenyen i footer
+        som har en lysegrønn farge. 
+     </p>
+    
+     <br>
+     <div role="img" aria-label="Bilde av screenshot av vurdering for kontrast i om oss filen">
+      <img src="img/OBLIG-4/CONTRAST_ACCESSIBILITY_FIRST_OM_OSS.png" alt="">
+     </div>
+     
+     <br>
+   
+
+
+
+
+
+
+      <h3>Best practise</h3>
+      <div role="img" aria-label="bilde av screenshot av best practise fra lighthouse">
+        <img src="img/OBLIG-4/best_practice_om_oss.png" alt="">
+        </div>
+     
+      <p>
+        Her registreres det en avlastningslytter <strong>(unload listener)</strong>. Unload-hendelsen utløses ikke pålitelig og å lytte etter den kan forhindre nettleseroptimaliseringer som back-forward cache. Her kan 
+        pagehide eller synlighetsendring-hendelser istedenfor. 
+        Denne kobles til et program som kjøres på min maskin; Kaspersky. 
+        <br>
+        <strong>Browser errors were logged to the console</strong>. Feil logget på konsollen indikerer uløste problemer som kan komme fra nettverksforespørselsfeil og andre nettleser-bekymringer. 
+        <br>
+        <strong>CSP og XSS</strong>, viktig at CSP er effektiv mot XSS-angrep. Det å ha en sterk innholdssikkerhetspolicy reduserer risiko for at en cross-site scripting angrep reduseres dramatisk. 
+        Her er ingen CSP funnet i håndhevingsmodus. High severity. 
+
+      </p>
+      <br>
+     
+
+
+
+      <h3>Performance</h3>
+      <div role="img" aria-label="Bilde av screenshot av performance i lighthouse">
+        <img src="img/OBLIG-4/PERFORMANCE_OM_OSS_FIRST.png" alt="">
+        </div>
+     
+      <p>Som de respektive sidene overfor foreligger det samme vurderinger fra lighthouse. </p>
+      <p>
+       Bildefilene er store og bruker derfor lenger tid når det gjelder nedlastningstid. Dette er forhold som er viktig, brukere/kunder vil vurdere det negativt om siden er treg og det kan resultere i 
+        å miste kunder til andre konkurrenter som har en raskere nedlastningstid. JPEG og PNG filer tar større plass. Beste er å lagre bilder i next-gen formater som Webp og AVIF for bedre komprimering og
+        vil gi raskere nedlasdtninger og mindre dataforbruk.   
+      </p>
+        <br>
+        <p>
+        Bilde elementer har ikke eksplisitt width og height (bredde og høyde). Dette kan redusere layoutforskyvninger og forbedre CLS. 
+      </p> 
+        <br>
+        <p>
+        Side forhindret tilbake og forover buffergjennoppretting. Mange navigasjioner utføres ved å gå tilbake til forrige side eller forover igjen. TIlbake/frem- cachen (bfcache)
+        kan fremskynde disse returnnavigasjonene. 
+
+        Her spiller også program som kjøres på min personlige maskin inn som heter Kaspersky. I forhold til koden på nettsiden er det mindre å gjøre derfra som kan bedre dette, som går som "3rd-party resources"
+        som har en effekt i disse: enable text compression, url, reduce unused css. 
+      </p>
+      
+
+        <br>
+        <br>
+        <h4>USE HTTP/2 </h4>
+        <p>
+        Siden kjøres i protokollen HTML/1. Men protokollen HTTP/2 har flere fordeler, denne er binary istendefor textual. I tilleegg er den fullstendig multiplekset istedenfor å blokkerende og ordnende tilkoblinger som i HTTP/1. 
+        Elimerer også behovet for domenedeling, kan derfor brukes for alle ressurser fra et gitt domene. 
+        Bruker header-komprimering for å redusere overhead, lar servere pushe svar proaktivt inn i klientbuffer (har blitt fjernet fra nettlesre siden det ikke har funket som designet).
+        HTTP/1 kan jeg ikke endre på, prøvde å undersøke om det var mulig å endre til HTTP/2.
+      </p>
+
+        <br>
+        <br>
+        <h4>SERVE IMAGES IN NEXT-GEN FORMATS / VIS BILDER I NESTE GENERASJONS FORMATER</h4> 
+        <p>
+        Bildeformater som WebP og AVIF gir ofte bedre komprimering enn PNG og JPEG som er brukt i dette tilfelle, dette kan hjelpe med raskere nedlastninger og mindre dataforbruk. 
+        Ressursstørrelse er 559.2KiB. Potensiell sparing vil være 276.6KiB for alle bilder som er brukt. 
+      </p>
+
+
+        <br>
+        <br>
+        <h4>ELIMINATE RENDER-BLOCKING RESOURCES/ ELIMINER GJENGIVELSEBLOKKERENDE RESSURSER</h4>
+        <p>
+        Ressurser blokkerer den første malingen på siden. Her kan det lønne seg å vurdere levere kritisk JS/CSS inline og utsette alle ikke-kritiske JS/stiler. 
+        Overføringsstørrelse er 2.5KiB og potensielle sparing vil være 690meter i sekundet. 
+        Kan være at Kaspersky programvare på min maskin påvirker denne. 
+      </p>
+
+        <br>
+        <br>
+        <h4>REDUCE UNUSED CSS/REDUER UBRUKTE CSS</h4> 
+        <p>
+        Reduser ubrukte regler fra stilark og utsett CSS som ikke brukes for innhold over skillelinjen for å redusere byte som forbrukes av nettverksaktivitet. 
+        Overføringstørrelse er 247.7 KiB og potensiell sparing er på 247.7KiB. 
+      </p>
+
+      <div role="img" aria-label="bilde av suggestion loading i om oss filen">
+        <img src="img/OBLIG-4/suggestion_loading_om_oss.png" alt="">
+      </div>
+      <p>Her er det som kan forbedres på performance i om-oss filen.</p>
+      
+
+
+
+        
+        <p>Legger ved pdf av lighthouse rapporten.</p>
+        <object data="img/OBLIG-4/ImgOblig4/All_cheks_LIGHTHOUSE_Index.pdf" type="application/pdf" width="100" height="500">
+          <p>Kan ikke pdf vises, <a href="img/OBLIG-4/ImgOblig4/All_cheks_LIGHTHOUSE_Index.pdf">last ned</a> istedefor. </p>
+
+        </object> 
+
+
+        
+        
+      <h2>DIAGNOSE OG FORKLARINGER</h2>
       <P>
-        * iMAGE ELEMENT DO NOT HAVE EXPLICIT/BILDEELEMENTER HAR IKKE ESKPLISITT BREDDE OG HØYDE 
+        <strong>iMAGE ELEMENT DO NOT HAVE EXPLICIT/BILDEELEMENTER HAR IKKE ESKPLISITT BREDDE OG HØYDE  </strong>
+        <br>
+        <p>
+  
         Bør angi en eksplisitt bredde og høyde på bildeelementer for å reduser layoutforskyvninger og forbedre CLS. Gjelder alle bilder og ikoner på siden. Hvert bilde og ikon bør derfor
         inneholde width og height. 
+      </p>
+        <br>
+       
 
         <br>
-        <img src="img/img/OBLIG 4 BILDER/page_prevented_back_forward_OM_OSS.png" alt="screenshot av cache restoriation OM OSS">
-        PAGE PREVENTED BACK/FORWARD CACHE RESTORATION/SIDE FORHINDRET TILBAKE/FOROVER BUFFERGJENNOPPRETTING 
+        <div role="img" aria-label="bilde av screenshot av Om oss delen av cache rest.">
+          <img src="img/OBLIG-4/page_prevented_back_forward_OM_OSS.png" alt="">
+          </div>
+       
+        <br>
+
+
+        
+        <br>
+        <h4>PAGE PREVENTED BACK/FORWARD CACHE RESTORATION/SIDE FORHINDRET TILBAKE/FOROVER BUFFERGJENNOPPRETTING</h4> 
+        <p>
         Handler om at mange navigasjoner utføres ved å gå tilbake til forrige side eller forover/neste igjen. Tilbake/forover cachen (bfcache) kan øke hastigheten på returnavigasjonene. 
+      </p>
 
+      
         <br>
-        SERVE STATIC ASSETS WITH AN EFFICIENT CACHE POLICY 
+        <br>
+        <h4>SERVE STATIC ASSETS WITH AN EFFICIENT CACHE POLICY </h4>
+        <p>
         En lang cache-levetid kan fremskynde gjentatte besøk på siden. 
+      </p>
+       
 
-      </P>
-
-      <h2>ACCESSIBILITY</h2>
-      <img src="img/img/OBLIG 4 BILDER/accessibility_om_oss.png" alt="bilde av accessibility om oss">
-      <p>Accesibility eller tilgjenilighet-sjekker, fremhever muligheter til å forbedre tilgjengeligheten til en webapp. Scorer 92 på accessibility, selv om dette ikke er konkrete nivåer der det er mer som spiller inn- automatisk gjenkjenning kan bare
+    
+        <br>
+        <br>
+        <h4>Accesibility eller tilgjenilighet-sjekker</h4>, 
+        <p>fremhever muligheter til å forbedre tilgjengeligheten til en webapp. Scorer 92 på accessibility, selv om dette ikke er konkrete nivåer der det er mer som spiller inn- automatisk gjenkjenning kan bare
         oppdage et undersett av problemer og har ingen garanti for tilgjengeligheten til webappen (det oppfodres til manuell testing).
+      </p>
 
         <br>
-        CONTRAST
+        <br>
+        <h4>CONTRAST</h4>
         Bakgrunnsfarge og forgrunnsfarger har ikke tilstrekkelig kontrastforhold. Dette gjelder i footer, lenkene som ligger der. Tekst med lav kontrast kan være vanskelig eller helt umulig å lese for mange brukere. 
         Kan gå vekk fra grønn til en mer solid farge (f.eks. sort) for å forbedre dette. Jeg valgte hovedskakelig den fonten og fargen for å vise til at det er header seksjonen, det som vil være normalt å finne nederst på nettbutikker
         og det er ikke det som henviser til produkter. Men endringer her vil kunne gi muligheter til forbedring av lesbarhet til innholdet. 
 
      
-       </p>
-
-       <h2>BEST PRACTICES</h2>
-       <img src="img/img/OBLIG 4 BILDER/best_practice_om_oss.png" alt="screenshot av best practice i Om Oss">
-       <p>
-        GENERAL 
-        REGISTERS AN UNLOAD LISTENER / REGISTRER EN AVLASTNINGSLYTTER
+        <br>
+        <br>
+        <h4>REGISTERS AN UNLOAD LISTENER / REGISTRER EN AVLASTNINGSLYTTER</h4>
+        <p>
         Unload-hendelse utløses ikke pålitelig og å lytte eterden kan forhindre nettleseroptimaliseringer som back-forward cache, her kan det brukes pagehide eller synlighetsendringhendelse istedenfor. 
+      </p>
 
-        <BR>
-          BROWSER ERRORS WERE LOGGED TO THE CONSOLE / NETTLESEFEIL BLE LOGGET PÅ KONSOLLEN
+        <br>
+        <br>
+          <h4>BROWSER ERRORS WERE LOGGED TO THE CONSOLE / NETTLESEFEIL BLE LOGGET PÅ KONSOLLEN</h4>
+          <p>
           Dette kan komme fra nettverksforespørspels feil og andre nettleserproblemer, når det er feil logget på konsollen som indikerer at det er uløste problemer. 
           Her dukker det feil som at det ikke kunne lastes inn til ressursersen; serveren svarte med statusen 404 som indikerer "ikke funnet" på snapchat-ikon, facebook-ikon og instagram ikon. 
-          
+        </p>
+
           <br>
-          TRUST AND SAFETY/ SIKKERHET
+          <br>
+          <h4>TRUST AND SAFETY/ SIKKERHET</h4>
+          <p>
           Nå er ikke denne nettbutikken oppe å går, men hadde den vært aktiv så ville det kunne blitt utført ett cross-site scripting angrep som går ut på å manipulere nettsider. Her er det da tydeligvis XXS hull (eller sårbarhet) 
           på grunn av at det ikke finnes noen CSP. 
        </p>
-        
+
+      
 
 
        </section>
@@ -295,20 +762,6 @@
 
        </p>
 
-       <h3>SEO PERSPECTIVE</h3>
-       <!-- ChatGPT av index-fil, SEO-->
-       <img src="img/img/OBLIG 4 BILDER/chatGPT_index_SEO.png" alt="screenshot av ChatGPT, SEO på index fil">
-
-       <!-- ChatGPT av produkt-fil, SEO-->
-       <img src="img/img/OBLIG 4 BILDER/chatGPT_produkt_SEO.png" alt="screenshot av ChatGPT, SEO på produkt-fil">
-
-       <!-- ChatGPT av om-oss-fil, SEO-->
-       <img src="img/img/OBLIG 4 BILDER/chatGPT_om_oss_SEO.png" alt="screenshot av ChatGPT, SEO på om-oss-fil">
-
-
-
-
-
 
 
        </section>
@@ -317,81 +770,562 @@
 
         
        <section id="sec-uu">
-        <h1>UU </h1>
+        <h1>UU ANALYSER </h1>
+        <p>
+          <strong>UU er en universiell utforming som handler om tilrettelegging av samfunnet, uavhengig om du har utfordringer eller ikke- også på det tekniske eller digitale spekteret. 
+            Verktøyene går ut ulike måter for å sjekke om alle UU-krav er tilstede, finnes både som programmer og tilleggspakker for nettleser. 
+            I dette tilfelle brukes plug-in til Chrome; Wave. 
+            </strong>
+        </p>
+        <h2>Index.html</h2>
+        <div role="img" aria-label="Bilder av index filer">
+          <img src="img/OBLIG-4/ImgOblig4/contrast_index_Wave.png" alt="">
+          <img src="img/OBLIG-4/ImgOblig4/order_index_Wave.png" alt="">
+          <img src="img/OBLIG-4/ImgOblig4/structure_index_Wave.png" alt="">
+        </div>
+       
 
-        <!-- ChatGPT av index-fil, UU-->
-        <img src="img/img/OBLIG 4 BILDER/chatGPT_index_UU.png" alt="screenshot av ChatGPT, UU på index-fil">
+        <h3>Detaljer</h3>
+        <p>
+          <h4>Alerts: Redudant link:</h4>
+          <p>
+          Her er det en tilstøtende/nærliggende lenke, som går til samme url som i dette tilfelle er både i index.html(Hjem) og om-oss.html (Om Oss) - vil si at den har en annen hyperlink ved siden av seg som leder til samme adresse. 
+          Her er en løsning å kombinere den tilstøtende lenken til den andre og deretter fjerne tekst eller alternativ tekst som den tilstøtende/redudant link har. 
+          Både Hjem og Produkt har redudant linker. 
+        </p>
 
-        <!-- ChatGPT av produkt-fil, UU-->
-        <img src="img/img/OBLIG 4 BILDER/chatGPT_produkt_UU.png" alt="screenshot av ChatGPT, UU på produkt-fil">
+          <br>
+          <h4>Features:</h4>
+          <p> Bilder: 
+          På siden er det 5 bilder med alternativ tekst. For.eks. alt=»tekst» i html filen. Det er en viktig funksjon for bilde, når det gjelder tilgjengelighet. 
+          Er bildene ikke tilgjengelig (situasjoner der bilder ikke vises på enkelte skjermer eller rett og slett ikke tilgjengelig), så foreligger det tekst om det bilde som ikke vises og det vil alle ha tilgang på,
+          enten om bildene vises eller ikke. Derfor bør konteksten være noe konkret. 
+          Nå har jeg kun referert til fotograf, men her kunne jeg skrevet mer konkret som f.eks. «brun lav sko».
+        </p>   
 
-        <!-- ChatGPT av om-oss-fil, UU -->
-        <img src="img/img/OBLIG 4 BILDER/chatGPT_om_oss_UU.png" alt="screenshot av ChatGPT, UU på om-oss-fil">
+          <h4>Linker:</h4> Alternativ tekst er tilstede for et bilde som er innenfor en lenke, som er gjort på nettsiden. 
+          Dette er viktig å inkludere alternativ passende tekst, for det sikrer at funksjonen og formålet med lenken og dets innhold er tilgjengelig for brukere av skjermlesere 
+          eller når bilder er utilgjengelige. 
+
+         <h3>Strucural elements:</h3>
+        
+          
+          <br>
+          <h4>H1:</h4> Handler om at H1 elementet er tilstede. 
+          <p>
+          Dette er viktig siden overskrifter letter sidenavigasjonen for brukere av hjelpemidler, i tillegg som også gir semantisk og visuell mening og struktur til dokumentet. 
+          Første overskrift (H1) bør inneholde det viktigste på siden.
+        </p>  
+          <br>
+          <h4>Unordered list:</h4>
+          <p> En punktliste er tilstede. Dette er viktig for uordnende lister presenterer en gruppe relaterte, parallelle elementer. 
+          Brukere av hjelpeteknologier kan navigere etter og innenfor lister. Her bør den uordnet listen være passende for konteksten. 
+          Hvis listeelementer er sekvensielle eller nummererte, vil en ordnet liste ol muligens være mer passende. 
+        </p>
+          <br>
+          <h4>Header:</h4>  
+          <p>
+          >Et header-element er tilstede. Det er viktig å kunne identifisere sideintroduksjon eller navigering. 
+          Det inngår vanligvis i nettsidens logo, topp-navigasjonen eller annet. Overskrifter forenkler sidesemantikk og navigering. 
+        </p>
+          <br>
+          <h4>NAV:</h4> 
+          <p>Nav-elementet er tilstede. Det er en viktig del siden navigasjonen identifiserer en del av navigasjonslenker og kan forenmkle sidesemantikk og navigering. 
+          Viktig at elementet definerer sidenavigering. Er det flere navigasjonselementer på samme side kan det differensieres med ARIA-etiketter.
+        </p>
+          <br>
+          <h4>Main content:</h4>  
+          <p>Main-elementet er tilstede. Main elementet eller main-attributtet indentifiserer hovedinnholdet på siden. Det forenkler sidesemantikk og navigering. 
+          Viktig at elementet omgir og definerer sidens hovedinnhold. 
+        </p>
+          <br>
+          <h4>Footer:</h4> 
+          <p>Footer elementet er tilstede. Det er viktig å identifiserer en bunntekst for siden. 
+          Her identifiseres gjerne relaterte linker, opphavsrett, forfatterskap og annet bunntekstinnhold. Det å bruke bunntekst forenkler sidesemantikk og navigering. 
+          Viktig at elementet omgir og definerer bunntekstinnhold på siden.
+        </p>
+          <br>
+          <h4>Aside:</h4> 
+          <p>Elementet Aside er tilstede. En side identifiserer sekundært, relatert eller komplementært innhold som vanligvis ligger i et sidefelt. 
+          </p>
+          
+        
+        <br>
+        <h3>Kontraster</h3>
+        <div role="img" aria-label="screenshot fra Wave og index fil av kontrast">
+          <img src="img/OBLIG-4/ImgOblig4/contrast_index_Wave.png" alt="">
+          </div>
+        
+        <p>
+          Ingen kontrast feil er oppdaget, men manuell testing er som regel nødvendig for å teste/undersøke andre potensielle kontrast feil. 
+        </p>
+
+        <h2>Produkt.html</h2>
+        <div role="img" aria-label="Bilder fra produkt fil, som er tatt på Wave">
+          <img src="img/OBLIG-4/ImgOblig4/details_produkt_Wave.png" alt="">
+          <img src="img/OBLIG-4/ImgOblig4/order_produkt_Wave.png" alt="">
+          <img src="img/OBLIG-4/ImgOblig4/structure_produkt_Wave.png" alt="">
+          </div>
+       
+        <h3>Detaljer</h3>
+        <br>
+        <p>
+          For å ikke skrive det samme som allerede er skrevet for Hjem-siden vil jeg kun identifisere og ikke forklare hva det handler om/eller betyr. 
+        </p>
+        <p>
+          <strong>Alerts: Image:</strong> To bilder har samme alternativ tekst. Dette er for at jeg henviste til fotograf på alternativ tekst, der to av bildene er fra samme person (TienSeven). 
+          Kunne eventuelt tatt med et siffer bak, evt. skrevet mer detaljer om det enkelte produkt som ville vært best for å identifsere en mer nøyaktig tekst i tilfelle bilde vil være utilgjengelig.  
+          <strong>Alerts: redudant link:</strong> Her har index.html/Hjem en tilstøtende/redundant link. Logo har samme link med alternativ tekst.
+          <br>
+          <strong>Features:</strong>
+          <br>
+          <strong>Alternative text:</strong>  Fire av bildene har alternativ tekst. Det er fem bilder, men to av de har samme alternativ tekst- ergo fire. 
+          <br>
+          <strong>Linked image w/alternative text:</strong> Det foreligger alternativ tekst på alle tre  ikoner til sosiale medier.  
+          <br>
+          <strong>Strucural elements:</strong>
+          <br>
+          <strong>Heading level 1:</strong> Det foreligger H1- element. 
+          <br>
+          <strong>Heading level 2:</strong>  Det foreligger H2- elementer. Overskrifter letter sidenavigering for brukere av hjelpemidler men gir også semantisk og visuell mening og struktur til dokumentet. 
+          Den akutelle teksten  bør være overskrift og strukturert riktig i sidekonturen. Fem stk, for hvert produkt. 
+          <br>
+          <strong>3 x Unordered list: </strong> Tre uordnende lister er tilstede. Presenterer en gruppe relaterte, paraelle elementer. Her ligger de i Aside, header (navigasjonslinker) og footer. 
+          <br>
+          <strong>1 x Header: </strong> Header-elementet er tilstede. 
+          <br>
+          <strong>1 x Navigation: </strong>  Navigasjons-elementet er tilstede. 
+          <br>
+          <strong>1 x Main Content: </strong> Main-elementet er tilstede. 
+          <br>
+          <strong>1 x Footer: </strong> Footer-elementet er tilstede. 
+          <br>
+          <strong>1 x Aside: </strong> Aside-elementet er tilstede. 
+        </p>
+       <h3>Kontraster</h3>
+       <div role="img" aria-label="Kontrast av produkt fil på Wave">
+        <img src="img/OBLIG-4/ImgOblig4/contrast_produkt_Wave.png" alt="">
+        </div>
+      
+       <br>
+       <p>
+        Ingen kontrast feil er oppdaget, men manuell testing er som regel nødvendig for å teste/undersøke andre potensielle kontrast feil.
+       </p>
+
+       <h2>Om oss.html</h2>
+       <div role="img" aria-label="Bilder og screenshots av Om oss filen fra Wave">
+        <img src="img/OBLIG-4/ImgOblig4/details_om_oss_Wave.png" alt="">
+        <img src="img/OBLIG-4/ImgOblig4/order_om_oss_Wave.png" alt="">
+        <img src="img/OBLIG-4/ImgOblig4/structure_om_oss_Wave.png" alt="">
+       </div>
+   
+       <h3>Detaljer</h3>
+       <br>
+       <p>
+        For å ikke skrive det samme som allerede er skrevet for Hjem-siden vil jeg kun identifisere og ikke forklare hva det handler om/eller betyr.
+       </p>
+       <p>
+        <strong>Alerts: Redudant link:</strong> Det er redudant link, som har en tilstøtende lenke for index.html (hjem)- som vil være på alle sider siden dette er header. Kan endre alternativ tekst i logo elementet. 
+        <br>
+        <strong>Features: </strong>
+        <br>
+        <strong>3 X alternative text: </strong> Det er tre unike alternativ tekst på alle tre bildene. 
+        <br>
+        <strong>3 X linked image with alternative text: </strong> Det er er tre unike alternativ tekst på lenkene. 
+        <br>
+        <strong>1 X Language: </strong> Tilstede. 
+        <br>
+        <br>
+        <strong>Structural Elements: </strong>
+        <br>
+        <strong>1 x heading level 1: </strong> Det foreligger en hovedoverskrift (Om oss). 
+        <br>
+        <strong>3 x Heading level 2: </strong> Det foreligger tre overskrifter innenfor hver del (Historie, Daglig leder og Ledige stillinger). 
+        <br>
+        <strong>3 x Unordered List: </strong> Det foreligger tre uordnende lister (aside, navigasjonslinker og footer). 
+        <br>
+        <strong>1 X Header: </strong> Det foreligger en header. 
+        <br>
+        <strong>1 X Navigation: </strong> Det foreligger en navigasjonsmeny. 
+        <br>
+        <strong>1 X Main Content: </strong> Det foreligger et main el. 
+        <br>
+        <strong>1 X Footer: </strong> Det foreligger et footer el.
+        <br>
+        <strong>1 X Aside: </strong> Det foreligger et aside-element
+        <br>
+       </p>
+       <h3>Kontraster</h3>
+       <div role="img" aria-label="Bilde av screenshot av kontraster i Om Oss">
+        <img src="img/OBLIG-4/ImgOblig4/contrast_om_oss_Wave.png" alt="">
+        </div>
+       
+       <p>
+        Ingen kontrast feil er oppdaget, men manuell testing er som regel nødvendig for å teste/undersøke andre potensielle kontrast feil.
+       </p>
+      </section>
+
+
+
+      
+
+
+      <section id="col-chat-gpt">
+        <p>
+          All kode er kopiert inn, både index.html, om-oss.html, produkt.html og style.css. Svaret fra ChatGPT: 
+        </p>
+        <h3>General Recommendations:</h3>
+        <div role="img" aria-label="Bilde av screenshot av chatGPT sin anbefaling">
+          <img src="img/OBLIG-4/ImgOblig4/ChatGPT_general_recom.png" alt="">
+        </div>
+       
+        <br>
+        <br>
+        <h3>Specific Recommendations</h3>
+        <div role="img" aria-label="Bilde av screenshot av ChatGPT sin spesifikk anbefalinger">
+          <img src="img/OBLIG-4/ImgOblig4/ChatGPT_spesific_recom.png" alt="">
+          </div>
         
 
 
 
-       </section>
+      </section>  
+      
+       
+    
+      <section id="changes-0">
+
+
+        <h2> 
+          ENDRINGER I INDEX.HTML
+        </h2>
+
+        <h3>Tabell av Lighthouse, ChatGPT og Wave</h3>
+
+        <!-- Aria -->
+        <div role="img" aria-label="Bilder fra ChatGPT av anbefalinger og spesifikke anbefalinger">
+          <img src="img/OBLIG-4/TABELL_AV_DE_TRE.png" alt="">
+          <img src="img/OBLIG-4/TABELL_AV_DE_TRE_SPESIFIKK.png" alt="">
+        </div>
+      
+        <br>
+        <br>
+        <h2>ENDRINGER SOM ER GJORT:</h2>
+        <h3>Nåværende poeng:</h3>
+        <div role="img" aria-label="Bilde av screenshot av nåværende poeng fra lighthouse">
+          <img src="img/OBLIG-4/ImgOblig4/LIGHTHOUSE_INDEX_PROSENT.png" alt="">
+         </div>
+       
+      
+        <h3>PERFORMANCE</h3>
+
+        <div role="img" aria-label="Bilde av screenshot av 68 prosent på performance">
+          <img src="img/OBLIG-4/PERFOMANCE_INDEX_MOBIL_NEW.png" alt="">
+        </div>
+
+        <p>
+          Her er det bildene som spiller inn. Som i produkt-filen har jeg endret bildene til webp fra jpeg eller png for å spare plass. Den sier for å få raskere nedlastningstiden så bør bildene gjøres noe med. 
+          Nå er nedlastningstid en viktig faktor når det gjelder SEO men tørr ikke å endre for mye av disse bilde-størrelsene fra oblig 3. 
+          <br>
+          Andre faktorer som spiller negativt inn på poengsummen er mine applikasjoner på maskinen min, som Kaspersky (som text compression, reduce unused css, render-blocking resources, reduce unused JS, minifyy JS). I tillegg til HTTP/1.   
+          <br>
+          Ikonene har ikke en bredde og høyde egenskap. 
+          <br>
+          Jeg fjernet ubrukt css, etter å ha undersøkt siden via Coverage tab. Den viser også kommentarer inne på css filen som de mener er ubrukt- men disse kan ikke fjernes. 
+          <br>
+          Har lagt inn mer definert meta tag med width og initial-scale.  
+        </p>
+
+        <H3>ACCESSIBILITY</H3>
+        <div role="img" aria-label="Bilde av screenshot av 100 av Accesibility i lighthouse">
+          <img src="img/OBLIG-4/ACCESSIBILITY_INDEX_NEW_LIGHT.png" alt="">
+          </div>
         
-      
+          <p>
+            Har fått Accessibility til å gå opp til 100. Her har alle bilde elementer fått alt-attributter. Meta name. Kontrast ratio i bakgrunn og forgrunn endret. 
+            Alle id attributter er unike. HTML-element har img-attributter. 
+          </p>
+
+          <h3>BEST PRACTICES</h3>
+          <div role="img" aria-label="Bilde av screenshot av 95 av Best Practise i lighthouse">
+            <img src="img/OBLIG-4/BEST_PRACTISE_INDEX_NEW.png" alt="">
+            </div>
+         
+          <p>
+            Her går det negativt pga. programvaren Kaspersky. Den registrer en unload listener og har ikke sikret CSP for å reduserere muligheten for XXS-angrep. 
+
+          </p>
+
+          
+          <h3>SEO</h3>
+          <div role="img" aria-label="Bilde av screenshot med 100 i SEO">
+            <img src="img/OBLIG-4/SEO_INDEX_FULL_MOLBIL.png" alt="">
+            </div>
+          
+          <p>
+            Her har jeg endret meta-taggen, til en mer detaljert metadata med description. Linkene har en forklarende tekst. Siden blokkeres ikke fra indexing som er en fordel når det gjelder søkemotorer. 
+            <br>
+            Alle bildene har enm mer forklarende alternativ tekst.  Linkene har beskrivende tekst. 
+          </p>
+
+           <!-- Lagt til pdf fil av nyeste lighthouse analyse-->
+          <h4>LIGHTHOUSE FOR INDEX/HJEM FIL, FINNES I PDF HER: </h4>
+          <object data="img/OBLIG-4/ImgOblig4/LIGHTHOUSE_INDEX_MOBIL_NEW.pdf" type="application/pdf" width="100" height="500">
+            <p>Kan ikke pdf vises, <a href="img/OBLIG-4/ImgOblig4/LIGHTHOUSE_INDEX_MOBIL_NEW.pdf">last ned</a> istedefor. </p>
+          </object>
+
+
+
+
 
       
+          <h2>ENDRINGER I PRODUKT.HTML</h2>
+          <h3>Nåværende poeng:</h3>
+          <div role="img" aria-label="Bilde av screenshot av lighthouse for mobil av produkt fil">
+            <img src="img/OBLIG-4/ImgOblig4/lighthouse_produkt_mobil.png" alt="">
+          </div>
+         
+          
+          
+            <h3>PERFORMANCE</h3>
+            <div role="img" aria-label="Bilde av screenshot av prosent oppfylt på Performance">
+              <img src="img/OBLIG-4/ImgOblig4/performance_produkt.png" alt="">
 
-      <section id="sec-1">
-      
-          <img src="#" alt="BILDETEKST">
-          <a href="#">TEKST</a>
+            </div>
+            
+            <P>
+            Jeg har endret bildefilene fra jpeg eller png til webp, som er en bildefil som de fleste nettbutikker bruker som tar minst plass. Endret på detaljer rundt bilder, som width, height og max-height. De fleste i auto eller 100. 
+            <br>
+            For å kunne gjøre Performance bedre, så bør mer detaljer utføres der. Men redd for å endre for mye, av den gamle oppgaven. Ellers ville den opp på en 100. 
+            <br>
+            Ellers er det program som kjøres på mine maskiner fra KasperSk som trekker ned. Dette har ingen direkte koblingh med oppbyggingen av nettsiden, så det kan ikke jeg gjøre endringer på igjennom kodene (kunnel lagt til JS men det gjøres ikke). 
+            <br>
+            Har undersøkt om det er mulig å endre fra HTTP/1 til HTTP/2 men det er ikke noe som kan gjøres. Kan endre på noe på cache om det er ønskelig. 
+            <br>
+            Avslutningsvis ligger PERFORMANCE nå på 70. 
+          </P>
+
+          
+            <h3>ACCESSIBILITY</h3>
+            <div role="img" aria-label="Bilde av screenshot av 100 i Accesibility">
+              <img src="img/OBLIG-4/ImgOblig4/accessibility_produkt_mobil.png" alt="">
+              </div>
+           
+
+            <P>
+              Denne gir muligheten for forbedring av accessibility for web applikasjonen. 
+              <br>
+              Den lå på 92 og er nå 100. Her har jeg endret bakgrunnen for å få en fullstendig bak og forgrunn. Har lagt inn mer detaljer på alternativ tekst. Både på de som allerede var her, og lagt til på de som ikke hadde tekst. 
+              Har endret på aria. Footer tekst er mer tydelig. 
+            </P>
+
+            <h3>BEST PRACTISE</h3>
+            <div role="img" aria-label="Bilde av screenshot av 95 prosent i best practise">
+              <img src="img/OBLIG-4/best_practise_produkt_mobil.png" alt="">
+             </div>
+            
+            <p>
+              Det som gjør at jeg ikke får den høyere er igjen pga. programmer som kjøres på min maskin fra Kaspersky vedr. unload listener. Har heller ikke lagt til en sterk content security policy. 
+              Kun disse to som gir meg en 95 prosent. Men nå er ikke denne oppgaven om sikkerhet. 
+            </p>
+
+
+
+            <h3>SEO</h3>
+            <div role="img" aria-label="Bilde av screenshot av 100 for SEO">
+              <img src="img/OBLIG-4/SEO_PRODUKT_MOBIL.png" alt="">
+            </div>
+            
+            <p>
+              Her har jeg endret på meta-dataen (på alle sidene) for å være mer spesifikk, som optimiserer for mer mobil-vennlige størrelser og hjelper mot delay i user input. 
+              Linkene er mer detaljerte om informasjon. Linkene er nå crawlable. Har nå alt attributter på alle sider. Tekstern er endret, til en større font for at det er mulig for alle uavhegig bakgrunn å lese. 
+              <br>
+              Har ingen plug-in. 100% appropriately sized tap targets- som er gjort på interaktive knapper som ikke overlapper hverandre. 
+            </p>
+
+             <!-- Lagt til pdf fil av nyeste lighthouse analyse-->
+            <h4>LIGHTHOUSE FOR PRODUKT HTML FIL, FINNES I PDF HER: </h4>
+            <object data="img/OBLIG-4/ImgOblig4/NEW_LIGHTHOUSE_PRODUKT.pdf" type="application/pdf" width="100" height="500">
+              <p>Kan ikke vise pdf. <a href="img/OBLIG-4/ImgOblig4/NEW_LIGHTHOUSE_PRODUKT.pdf">Last ned</a>istedenfor. </p>
+            </object>
+
+
+
+
+
+
+            <h2>ENDRINGER I OM-OSS FIL</h2>
+            <H3>Nåværende poengsum:</H3>
+            <div role="img" aria-label="Bilde av screenshot av Lighthouse, Om oss fil">
+              <img src="img/OBLIG-4/LIGHTHOUSE_OM_OSS_NUEVO.png" alt="">
+             </div>
+            
+
+            <h3>PERFORMANCE</h3>
+            <div role="img" aria-label="Bilde av screenhsot fra Performance">
+              <img src="img/OBLIG-4/PERFORMANCE_OM_OSS_NUEVO.png" alt="">
+             </div>
+           
+            <p>
+              Her har jeg også endret bildefiler fra jpeg og png til webp-filer for å gjøre bildene mindre i størrelser (next-gen formater). Har redusert noe css som er ubrukt. 
+            </p>
+
+            
+          <h3>ACCESSIBILITY</h3>
+          <div role="img" aria-label="Bilde av screenshot av 100 poeng i Lighhouse fra Accesibility">
+            <img src="img/OBLIG-4/ACCESSIBILITY_OM_OSS_NUEVO.png" alt="">
+          </div>
+          
+           <p>
+          Det er gjort samme tiltak som i index og produkt filen. 
+
+           </p>
+
+           
+        <h3>BEST PRACTISE</h3>
+        <div role="img" aria-label="Bilde av screenshot av popengsum på 95 i Best practise">
+          <img src="img/OBLIG-4/BEST_PRACTISE_NUEVO.png" alt="">
+        </div>
+       
+        <p>
+          Samme som i index.html og produkt.html. 
+        </p>
+
+        <h3>SEO</h3>
+        <div role="img" aria-label="Bilde av screenshot av 100 i SEO fra lighthouse">
+          <img src="img/OBLIG-4/SEO_OM_OSS_NUEVO.png" alt="">
+         </div>
+       
+        <p>
+          Samme endringer som i index.html og produkt.html. 
+        </p>
+
+        
+        <!-- Lagt til pdf fil av nyeste lighthouse analyse-->
+        <object data="img/OBLIG-4/ImgOblig4/LIGHTHOUSE_OM_OSS_NEW.pdf" type="application/pdf" width="100" height="500">
+          <p>Kan ikke pdf vises, <a href="img/OBLIG-4/ImgOblig4/LIGHTHOUSE_OM_OSS_NEW.pdf">last ned </a> istedenfor.</p>
+        </object> 
+
+
+        <h3>Produktet Converse fil</h4>
+          <p>I og med at jeg laget en produktside på nytt, for var usikker på om det var rett å gjøre som jeg gjorde på andre måten og i tillegg kunne legge
+            inn spesifikke metadata og mikrodata på et spesifikt produkt så måtte jeg ta en lighthouse analyase på denne siden også. Den bygde jeg opp av 
+            endringer som er gjort. 
+            Under legger jeg ved lighthouse analysen for første (og siste analyse), siden det meste er laget etter endringene så blir alt lagt inn i seksjonen "endring". 
+            Har ikke gjort andre endringer enn som de første filene. 
+          </p>
+        <object data="img/OBLIG-4/ImgOblig4/converse-produkt_fil_first.pdf" type="application/pdf" width="100" height="500">
+          <p>Kan ikke pdf vises, <a href="img/OBLIG-4/ImgOblig4/converse-produkt_fil_first.pdf">last ned</a> istedenfor. </p>
+        </object>  
+
+
+          
+
+
+         
           <!-- Mangler H-tag, vurderte å bruke figcaption istedenfor men siden det ikke er noe krav på at overskrift må være med brukes heller a tagg -->
          
+
+      </section>
+
+      <section id="del-3">
+        <h1>
+          Tilgjengelighet. 
+        </h1>
+        <p>Det går an å navigere seg frem på nettsdien ved kun bruk av TAB- tasten. For hver tab-trykk, vil den bytte til neste knapp. På produkt-converse filen
+          kan du trykke på tab for å f.eks. velge størrelse av produktet og deretter legge i handlekurv.  </p>
+
+        <h2>
+          Skjermleserkompatibilitet
+        </h2>
+        <p>Kjører i Windows som OS, bruker derfor CTRL + WIN + ENTER kanppene for å få opp skjermleser applikasjonen. </p>
+
+
+
+        <h2>
+          Tastaturnavigasjon
+        </h2>
+        <p>Det er mulig å navigere seg med kun </p>
+        <div role="img" aria-label="Bilde av screenshot av kode som skipper til meny">
+          <img src="img/OBLIG-4/skip_videre_.png" alt="">
+
+        </div>
+      
+        <p>Bilde av koden som er lagt inn. </p>
+
+        <h2>Aria attributter</h2>
+        <p>Nå tolker jeg at det ikke skal endres av det som allerede går som semantisk. Men jeg legger til ARIA på denne siden.
+          Har endret på alle img - elementer. Fjernet den alternative teksten som var før jeg la inn div role="img" aria-label="beskrielse" så det ikke ender 
+        med en redudant link. 
+      Nå har jeg ikke så mange andre elementer som kan brukes uten at det vil endre for mye. 
+    Jeg har ikke endret på de andre filene, for det ville gitt mange d i v  tagger som oblig 3 hadde en maks-sum på fem stk, for å endre på alle bildene ville denne summen blitt overstiget.
+    Ellers har jeg endret på navigasjon og header.  
+    <br>
+    <strong>EDIT: </strong> har endret tilbake noen aria-attributter, som i header pg main til det som var fra før.  
+  
+  </p>
+
+
+
+
+      </section>
+
+      <section id="del-4">
+        <h1>Mikrodata og rike resultater</h1>
+        <p>Nå gjør jeg det på den måten som jeg føler er beste og vet at mange anbefaler (JSON) men jeg har lagt ved koden jeg la inn før jeg heller valgte JSON 
+          nederst på siden (converse-produkt).  </p>
+          <div role="img" aria-label="Bilde av resultat på rike resultater">
+            <img src="img/OBLIG-4/RIKE_RESULTATER.png" alt="">
+          </div>
+          
+
+
+
+
+
+      </section>
+
+
+
+      <section id="del-5">
+
+
+
 
       </section>
       
 
    
 
-      <section id="sec-2">
-       
-          <img src="#" alt="BILDETEKST">
-          <a href="#">TEKST</a>
-          <!-- Mangler H-tag, vurderte å bruke figcaption istedenfor men siden det ikke er noe krav på at overskrift må være med brukes heller a tagg -->
-          
-
-      </section>
   
        
          
-       <section id="sec-3">
-        <img src="#" alt=" tekst ">
-        <a href="#">TEKST</a>
-        <!-- Mangler H-tag, vurderte å bruke figcaption istedenfor men siden det ikke er noe krav på at overskrift må være med brukes heller a tagg -->
-      
-        
+    
+  
 
-      </section> 
       
 
-      <section id="sec-4">
-        <img src="#" alt=" tekst ">
-        <a href="#">TEKST</a>
-        <!-- Mangler H-tag, vurderte å bruke figcaption istedenfor men siden det ikke er noe krav på at overskrift må være med brukes heller a tagg -->
       
-      </section>
-    </section>
+     
+
     </main>
+
+
+
     <footer>
-           <!-- Legger til icons fra Fontawesome, som vi gi ikoner for sosiale medier som Instagram, Snapchat og Facebook -->
+        <!-- Legger til icons fra Fontawesome, som vi gi ikoner for sosiale medier som Instagram, Snapchat og Facebook -->
             <!-- Måtte gjøre på denne måten slik at de sosiale medier icons blir synlig-->
             <div class="social">
-              <a href="img/img/icon/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg">
-                <img src="img/img/icon/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg" alt="ikon for instagram">
+              <a href="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg">
+                <img src="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg" alt="ikon for instagram">
                 <i class="icon ion-social-instagram"></i>
               </a>
-              <a href="img/img/icon/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg">
-                <img src="img/img/icon/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg" alt="ikon for snapchat">
+              <a href="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg">
+                <img src="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg" alt="ikon for snapchat">
                 <i class="icon ion-social-snapchat"></i>
               </a>
-              <a href="img/img/icon/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg">
-                <img src="img/img/icon/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg" alt="ikon for facebook">
+              <a href="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg">
+                <img src="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg" alt="ikon for facebook">
                 <i class="icon ion-social-facebook"></i>
               </a>
              </div>
@@ -438,20 +1372,7 @@
 
 
         
-      
-   
 
-    
-   
-
-   
-
-    
-
-
-
-
-      
     
 
   

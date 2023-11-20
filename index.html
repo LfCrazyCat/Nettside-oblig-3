@@ -1,37 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <!-- Litt usikker på oppsettet, men valgte å plassere alfabetisk etter meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="nettside for oblig av Louise Fosdahl, Informasjonssystemer">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-  <link href="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg" type="stylesheet" alt="snapchat-ikon"> </a> <!-- Link til snapchat ikon-->
-  <link href="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg" type="stylesheet" alt="facebook-ikon"> </a> <!-- Link til facebook ikon -->
-  <link href="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg" type="stylesheet" alt="instagram-ikon"> </a> <!-- Link til instagram ikon -->
+  <meta property="og:url" content="stud.hiof.no/~louisef/Nettside-oblig-3/" />
+  <meta 
+     name="description" 
+     content="Oblig 4 i webutvikling, Louise Fosdahl om nettside som selger sko.">
 
+  <!-- Linker til ikonene fra fontawesome -->
+  <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg"> <!-- Link til snapchat ikon-->
+  <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg"> <!-- Link til facebook ikon -->
+  <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg"> <!-- Link til instagram ikon -->
 
+   <!-- Linker til css stilark -->
+   <link rel="stylesheet" href="css/style.css" type="text/css">
+
+ 
   <!-- Tittel på siden-->
   <title>Hjem</title>
+
+<!-- Bruker OpenGraph som blant annet Facebook/Meta bruker-->
+  <meta property="og:title" content="Hjem">
+  <meta property="og:description" content="Forsiden til oblig 4 med linker videre.">
+  <meta property="og:image" content="#">
+  <meta property="og:site_name" content="Hjem">
+  <meta property="og:url" content="https://itstud.hiof.no/~louisef/Nettside-oblig-3">
+  <meta name="twitter:card" content="#">
+  <meta name="twitter:title" content="Hjem">
+  <meta name="twitter:description" content="Forsiden til oblig 4 med linker videre.">
+  <meta name="twitter:image" content="#">
+  <meta name="twitter:site" content="@oblig4nettbutikk">
+
+   <!-- Litt eldre måte -->
+   <meta property="fb:app_id" content="id_for_facebook_side" />
+   <meta property="instagram:site" content="@oblig4-eksempel"> 
+
+
+ <!-- meta tagger -->
+  <meta name="keywords" content="Sko, Shoes, Converse, color shoes, shoe size, converse offer, shoe offer, great shoe offer">
+  
+
 </head>
 <body>
+       <!-- Skip til hovedmeny som dukker opp ved trykk på TAB-knapp-->
+       <a href="index.html" class="skip-to-main-content-link">Snarvei til hovedinnholdet</a>
   <!-- Grid container -->
   <div id="grid-container">
     <header>
+      <!-- Skip til hovedmeyen, vet ikke om det vil at denne skal være synlig eller ikke?-->
+         
+          <section id="hovedinnhold" tabindex="-1">  </section>
+          
+      <form> <!-- Søkebar-->
+        <input type="search" placeholder="Søk her..." title="Search">
+        <button type="submit" title="Search..">Søk..<i class="fa-solid fa-magnifying-glass"></i> </button>
+      </form>
+   
+
       <nav>
-        <a href="index.html" id="logo" alt="LOGO">LOGO</a>
-       
-      
-      
-      
-
-
+        
         <ul class="navbar">
-          <li><a href="index.html">HJEM</a></li>
-          <li><a href="produkt.html">PRODUKT</a> </li>
-          <li><a href="om-oss.html">OM OSS</a> </li>
-          <li><a href="#">CONVERSE</a> </li>
-          <li><a href="#">NYHETER</a> </li>
+          <!--   <a href="index.html" class="snarvei">Skip til hovedinnholdet</a>
+          <section id="hovedinnhold" tabindex="-1">  </section>-->
+         
+            <li><a href="index.html">HJEM</a></li>
+            <!-- <a href="index.html" class="skip">Skip to content</a> -->
+            
+            <li><a href="converse-produkt.html">PRODUKT</a> </li>
+            <li><a href="om-oss.html">OM OSS</a> </li>
+            <li><a href="#">CONVERSE</a> </li>
+            <li><a href="#">NYHETER</a> </li>
+            <!-- Valgt å ikke fjerne selv om den er utgått siden SEO og UU analyser er tatt -->
+            <li><a href="produkt.html">UTGÅTT</a> </li>
         </ul>
+  <!-- Denne vil gjøre at de som kun bruker tastatur kan komme til hovedsiden -->
+        <p id="main" tabindex="-1"></p>
+      <!-- Kan brukes for skip flere linker-->
+        <!-- 
+        <ol>
+          <li><a href="index.html">HOVEDSIDEN</a> </li>
+        
+        </ol>
+        -->
+       
 
 
 
@@ -63,12 +116,12 @@
     <!-- Hovedinnhold -->
     <main>
        <section class="flex-section">
-        <h1>Velkomsttekst</h1>
+        <h1>Velkommen til nettbutikken</h1>
       
       
  <!-- Kaller disse for sec-0, som gjør at de ulike kateogoriene vil kunne brukes på samme måte i css -->
         <section id="sec-0">
-          <img src="img/Host/lave_host_modell_fra_6318832.webp" alt="bilde av 6318832">
+          <img src="img/Host/lave_host_modell_fra_6318832.webp" alt="Bilde av svarte lave sko, bilde av 6318832"> <!-- width="auto" height="auto"> -->
           <a href="#">TILBUD</a>
           <!-- Mangler H-tag, vurderte å bruke figcaption istedenfor men siden det ikke er noe krav på at overskrift må være med brukes heller a tagg -->
         
@@ -81,7 +134,7 @@
 
       <section id="sec-1">
       
-          <img src="img/Host/host_model_from_Alicija.webp" alt="bilde fra Alicija">
+          <img src="img/Host/host_model_from_Alicija.webp" alt="Bilde av brune cowboy-skoletter, bilde fra Alicija"> <!-- width="auto" height="auto"> --> 
           <a href="#">NYHETER</a>
           <!-- Mangler H-tag, vurderte å bruke figcaption istedenfor men siden det ikke er noe krav på at overskrift må være med brukes heller a tagg -->
          
@@ -93,7 +146,7 @@
 
       <section id="sec-2">
        
-          <img src="img/Mujeres/mujeres_multi_from_StockSnap.webp" alt="bilde fra StockSnap">
+          <img src="img/Mujeres/mujeres_multi_from_StockSnap.webp" alt="Bilde av fem damer med fargerike kjoler og skjørt, bilde fra StockSnap"> <!-- width="auto" height="auto"> -->
           <a href="om-oss.html">OM OSS</a>
           <!-- Mangler H-tag, vurderte å bruke figcaption istedenfor men siden det ikke er noe krav på at overskrift må være med brukes heller a tagg -->
           
@@ -103,7 +156,7 @@
        
          
        <section id="sec-3">
-        <img src="img/Host/host_couple_boots_uglydog0_from_5688709.webp" alt="bilde fra 5688709">
+        <img src="img/Host/host_couple_boots_uglydog0_from_5688709.webp" alt="Bilde av ett par som sitter å drikker kaffe med en hund, bilde fra 5688709"> <!-- width="auto" height="auto"> -->
         <a href="#">HØSTNYHETER</a>
         <!-- Mangler H-tag, vurderte å bruke figcaption istedenfor men siden det ikke er noe krav på at overskrift må være med brukes heller a tagg -->
       
@@ -113,9 +166,9 @@
       
 
       <section id="sec-4">
-        <img src="img/Ninos/ninos_converse_fromSplitShire.webp" alt="bilde fra SplitShire">
+        <img src="img/Ninos/ninos_converse_fromSplitShire.webp" alt="Bilde av jente som sitter på fjell, med sorte Converse-sko, bilde fra SplitShire"> 
         <a href="#">KIDDOS</a>
-        <!-- Mangler H-tag, vurderte å bruke figcaption istedenfor men siden det ikke er noe krav på at overskrift må være med brukes heller a tagg -->
+       
       
       </section>
     </section>
@@ -162,22 +215,7 @@
        
         </div>
 
-        <!-- Bruker JS for å gjøre navigasjonsmenyen responsoiv -->
-        <!-- 
-        <script>
-          let x = document.querySelector(".navbar")
 
-          document.getElementById("ham").addEventListener("click", (e) => {
-
-            if (x.className === "navbar") {
-              x.className += " responsive";
-            } else {
-
-              x.className = "navbar"
-            }
-          })
-        </script> -->
-    
 
   
   
@@ -185,3 +223,4 @@
 </html>
 
 <!-- HTML validator godkjent 12.11.23-->
+<!-- HTML validator godkjent på nytt 19.11.23-->

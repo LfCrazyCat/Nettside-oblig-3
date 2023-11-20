@@ -1,32 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <!-- Litt usikker på oppsettet, men valgte å plassere alfabetisk etter meta -->
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta 
+    name="description" 
+    content="Oblig 4 i webutvikling, Louise Fosdahl om nettside som selger sko.">
+
+    <meta property="og:title" content="Kule blå concverse fra Nettbutikk AS">
+    <meta property="og:url" content="https://schema.org/AggregatRating">
+    <meta property="og:description" content="Azul Converse zapatos es muy divertido">
+ 
+
+   <!-- Linker til ikonene fra fontawesome -->
+   <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg"> <!-- Link til snapchat ikon-->
+   <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg"> <!-- Link til facebook ikon -->
+   <link rel="stylesheet" href="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg"> <!-- Link til instagram ikon -->
+  <!-- Linker til css stilark -->
   <link rel="stylesheet" href="css/style.css" type="text/css">
-  <!-- Linker til ikoner -->
-  <link href="img/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg" type="stylesheet" alt="snapchat-ikon"> </a> <!-- Link til snapchat ikon-->
-  <link href="img/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg" type="stylesheet" alt="facebook-ikon"> </a> <!-- Link til facebook ikon -->
-  <link href="img/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg" type="stylesheet" alt="instagram-ikon"> </a> <!-- Link til instagram ikon -->
   
   <!-- Tittel på siden -->
   <title>PRODUKT/CONVERSE</title>
+
+     <!-- Bruker OpenGraph som blant annet Facebook/Meta bruker-->
+     <meta property="og:title" content="Gammel produkt side">
+     <meta property="og:description" content="En gammel side som gikk som produkt fil først">
+     <meta property="og:image" content="#">
+     <meta property="og:site_name" content="Produkt">
+     <meta property="og:url" content="https://itstud.hiof.no/~louisef/Nettside-oblig-3/produkt.html">
+     <meta name="twitter:card" content="#">
+     <meta name="twitter:title" content="Produkt utgått">
+     <meta name="twitter:description" content="Produkt filen for oblig 4 som er utgått">
+     <meta name="twitter:image" content="#">
+     <meta name="twitter:site" content="@oblig4nettbutikk">
+
 </head>
 <body>
+       <!-- Skip til hovedmeny som dukker opp ved trykk på TAB-knapp-->
+       <a href="index.html" class="skip-to-main-content-link">Snarvei til hovedinnholdet</a>
+
   <!-- Grid container -->
   <div id="grid-container">
     <header>
+    
+          <section id="hovedinnhold" tabindex="-1">  </section>
+
+      <!-- Søkebar-->
+          <form> 
+        <input type="search" placeholder="Søk her..." title="Search">
+        <button type="submit" title="Search..">Søk..<i class="fa-solid fa-magnifying-glass"></i> </button>
+      </form>
       <nav>
-        <a href="index.html" id="logo">LOGO</a>
-       
         <ul class="navbar">
           <li><a href="index.html">HJEM</a></li>
-          <li><a href="produkt.html">PRODUKT</a> </li>
-          <li><a href="om-oss.html">OM OSS</a> </li>
-          <li><a href="#">TILBUD</a> </li>
-          <li><a href="#">NYHETER</a> </li>
-        </ul>
+              <li><a href="converse-produkt.html">PRODUKT</a> </li>
+              <li><a href="om-oss.html">OM OSS</a> </li>
+              <li><a href="#">CONVERSE</a> </li>
+              <li><a href="#">NYHETER</a> </li>
+              <!-- Valgt å ikke fjerne selv om den er utgått siden SEO og UU analyser er tatt -->
+              <li><a href="produkt.html">UTGÅTT</a> </li>
+          </ul>
+  <!-- Denne vil gjøre at de som kun bruker tastatur kan komme til hovedsiden -->
+        <p id="main" tabindex="-1"></p>
+   
+
       </nav>
+
+        
+     
     </header>
 
     <!-- Sidedel/Aside-->
@@ -46,18 +90,24 @@
 
     <!-- Hovedinnhold -->
     <main>
+   
+          
+        
       <!-- Flex section som inngår i alle underseksjoner-->
       <section class="flex-section">
+        <span id="brand-name">
+          <a href="produkt.html">Converse</a>
+        </span>
 
         <!-- Overskrift for flex-section-->
-        <h1>Converse</h1>
+  
 
         <!-- Seksjon id for sec-0 som inneholder converse modell 0-->
         <section id="sec-0">
 
           <!-- Overskrift for modell 0 i seksjon sec-0-->
           <h2>Conversemodell 0</h2>
-          <img src="img/Converse/azul_converse_from_TienSeven.webp" alt="blå converse sko. Bilde fra TienSeven">
+          <img src="img/Converse/azul_converse_from_TienSeven.webp" alt="blå converse sko. Bilde fra TienSeven"> 
           <a href="#">KR 899</a>
         </section>
 
@@ -67,7 +117,7 @@
 
           <!-- Overskrift for modell 1 i seksjon sec-1-->
           <h2>Conversemodell 1</h2>
-          <img src="img/Converse/mujer_y_converse_from_Greyerbaby.webp" alt="hvite converse sneakers med synlig bein. Bilde fra Greyerbaby.">
+          <img src="img/Converse/mujer_y_converse_from_Greyerbaby.webp" alt="hvite converse sneakers med synlig bein. Bilde fra Greyerbaby."> 
           <a href="#">KR 699</a>
         </section>
 
@@ -87,7 +137,7 @@
 
           <!-- Overskrift for modell 3 i seksjon sec-3-->
           <h2>ConverseModell 3</h2>
-          <img src="img/Converse/roja_converse_whitedress_from_Vutrongtien.webp" alt="Røde Converse med hvit kjole. Bilde fra VutrongTien">
+          <img src="img/Converse/roja_converse_whitedress_from_Vutrongtien.webp" alt="Røde Converse med hvit kjole. Bilde fra VutrongTien"> 
           <a href="#">KR 699</a>
         </section>
         
@@ -97,10 +147,17 @@
 
           <!-- Overskrift for modell 4 i seksjon sec-4-->
           <h2>ConverseModell 4</h2>
-          <img src="img/Converse/couple_rojo_y_azul_converse_from_Boombinomie.webp" alt="Blå og røde Converse med jeans. Bilde fra Boombinomie">
+          <img src="img/Converse/couple_rojo_y_azul_converse_from_Boombinomie.webp" alt="Blå og røde Converse med jeans. Bilde fra Boombinomie"> 
           <a href="#">KR 699</a>
         </section>
+      
       </section>
+    
+
+      
+
+      
+    
     </main>
 
     <!-- Footer -->
@@ -144,3 +201,5 @@
   </div>
 </body>
 </html>
+
+<!-- Godkjent av validator -->
