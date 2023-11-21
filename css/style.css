@@ -275,26 +275,26 @@ main section img {
 }
 
 .flex-section h1 {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 
 .flex-section h2 {
-  font-size: 48px;
+  font-size: 35px;
 }
 
 .flex-section h3 {
-  font-size: 40px;
+  font-size: 30px;
   font-family: italic;
 }
 
 
 .flex-section h4 {
-  font-size: 35px;
+  font-size: 25px;
 } 
 
 .flex-section h5 {
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .flex-section p {
@@ -376,8 +376,6 @@ main section img {
 }
 
 
-
-
 /* Style for seksjon sec-3 */
 #sec-3 {
 
@@ -397,18 +395,13 @@ main section img {
   text-decoration: solid;
 }
 
-
-
 /* Style for seksjon sec-4 */
-
 #sec-4 {
  
   flex-direction: row;
   flex-wrap: wrap;
   background-color:navajowhite;
-  padding: 1rem; 
-  
-  
+  padding: 2rem; 
 } 
 
 /* Style for tekst i seksjonen sec-4 */ 
@@ -425,17 +418,19 @@ main section img {
   display: flex;
   flex-direction: column;
   background-color: #d7d6d4;
-  padding: 2rem;
+  padding: 1rem;
+
+}
+#sec-5 h2 {
+  font-size: 35px;
 }
 
 #sec-5 h3 {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 #sec-5 p {
-  width: 100%;
-  font-size: 42px;
-
+  font-size: 20px;
 }
 
 #sec-5 ul {
@@ -448,30 +443,28 @@ main section img {
 #sec-seo {
   display: flex;
   flex-direction: column;
-  background-color: #e6caa2;
+  background-color: rgb(217, 255, 234);
   padding: 2rem;
 }
 
 #sec-seo img {
-  width: 100%;
-  height: auto;
+  width: 50%;
 }
 
 #sec-seo h1 {
-  font-size: 55px;
+  font-size: 40px;
 }
 
 #sec-seo h2 {
-  font-size: 52px;
+  font-size: 35px;
 }
 
 #sec-seo h3 {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 #sec-seo p {
-  width: 100%;
-  font-size: 42px;
+  font-size: 20px;
 }
 
 /* Style for seksjonen som omhandler UU: sec-uu */
@@ -483,30 +476,28 @@ main section img {
 }
 
 #sec-uu img {
-  width: 100%;
-  height: auto;
+  width: 50%;
 }
 
 #sec-uu h1 {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 #sec-uu h2 {
-  font-size: 52px;
+  font-size: 35px;
 }
 
 #sec-uu h3 {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 #sec-uu h4 {
-  font-size: 45px;
+  font-size: 25px;
 
 }
 
 #sec-uu p {
-  width: 100%;
-  font-size: 42px;
+  font-size: 20px;
 }
 
 #breadcrumbs{
@@ -534,25 +525,23 @@ main section img {
 }
 
 #changes-0 img {
-  width: 100%;
-  height: auto;
+  width: 50%;
 }
 
 #changes-0 h1 {
-  font-size: 55px;
+  font-size: 40px;
 }
 
 #changes-0 h2 {
-  font-size: 52px;
+  font-size: 35px;
 }
 
 #changes-0 h3 {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 #changes-0 p {
-  width: 100%;
-  font-size: 42px;
+  font-size: 20px;
 }
 
 #del-3 {
@@ -562,24 +551,27 @@ main section img {
   padding: 2rem;
 }
 
+#del-3 img {
+  width: 50%;
+}
+
 #del-3 h1 {
-  font-size: 55px;
+  font-size: 40px;
 }
 
 #del-3 h2 {
-  font-size: 52px;
+  font-size: 35px;
 }
 
 #del-3 h3 {
-  font-size: 50px;
+  font-size: 30px;
 }
 #del-3 h4 {
-  font-size: 45px;
+  font-size: 25px;
 }
 
 #del-3 p {
-  width: 100%;
-  font-size: 42px;
+  font-size: 20px;
 }
 
 
@@ -589,24 +581,27 @@ main section img {
   background-color: #baa1f1;
   padding: 2rem;
 }
+
+#del-4 img {
+  width: 50%;
+}
 #del-4 h1 {
-  font-size: 55px;
+  font-size: 40px;
 }
 #del-4 h2 {
-  font-size: 52px;
+  font-size: 35px;
 }
 
 #del-4 h3 {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 #del-4 h4 {
-  font-size: 45px;
+  font-size: 25px;
 }
 
 #del-4 p {
-  width: 100%;
-  font-size: 42px;
+  font-size: 20px;
 }
 
 #del-5 {
@@ -616,25 +611,28 @@ main section img {
   padding: 2rem;
 }
 
+#del-5 img {
+  width: 50%;
+}
+
 #del-5 h1 {
-  font-size: 55px;
+  font-size: 40px;
 }
 
 #del-5 h2 {
-  font-size: 52px;
+  font-size: 35px;
 }
 
 #del-5 h3 {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 #del-5 h4 {
-  font-size: 45px;
+  font-size: 25px;
 }
 
 #del-5 p {
-  width: 100%;
-  font-size: 42px;
+  font-size: 20px;
 }
 
 /* Style for footer */ 
